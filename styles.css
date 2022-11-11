@@ -10,8 +10,18 @@ body {
   padding-bottom: 10px;
 }
 
+.spacer{
+  padding-bottom: 10px;
+  height: 100px;
+  opacity: 0;
+}
+
 .placeholder{
   height: 1000px;
+}
+
+.header{
+  font-size: 25px;
 }
 
 .visible {
@@ -55,7 +65,7 @@ a:hover {
   position: absolute; 
   top: 15px; 
   text-align: center; 
-  color: white;
+  color: black;
 }
 
 .obscureoverlay{  
@@ -70,7 +80,7 @@ a:hover {
 
 .mainstuff{
   position: absolute;
-  top: 10%;
+  top: 17%;
   width: 80%;
   left: 10%;
 }
