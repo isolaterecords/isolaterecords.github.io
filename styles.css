@@ -1,8 +1,22 @@
 body {
   margin: 0;
+  box-sizing: border-box;
   background-image: linear-gradient(to bottom, black, black);
   /* transition: background-color 0.25s linear; */
   overflow-x: hidden;
+}
+
+.nav-items {
+  display: flex;
+  list-style: none;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+.header {
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
 }
 
 .playlist{
@@ -20,10 +34,6 @@ body {
   height: 1000px;
 }
 
-.header{
-  font-size: 25px;
-}
-
 .visible {
   visibility: visible;
   opacity: 1;
@@ -38,10 +48,12 @@ body {
 }
 
 h1 {
+  font-size: 4rem;
   color: var(--fgColor);
 }
 
 h2 {
+  font-size: 2rem;
   color: var(--fgColor);
 }
 
@@ -59,13 +71,7 @@ a:hover {
 }
 
 .main-title{
-  font-size: 50px; 
-  padding-bottom: 0px; 
-  height: 60px; 
-  position: absolute; 
-  top: 15px; 
-  text-align: center; 
-  color: black;
+  text-align: center;
 }
 
 .obscureoverlay{  
@@ -79,26 +85,11 @@ a:hover {
 }
 
 .mainstuff{
-  position: absolute;
-  top: 17%;
+  position: relative;
   width: 80%;
   left: 10%;
 }
 
-.nav-items {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  float: right;
-}
-
-.nav-items li {
-  display: block;
-  float: right;
-}
-
-.nav-items li a {
-  display: block;
-  float: right;
-  padding: 1rem;
+.blurb {
+  text-align: center;
 }
