@@ -11,7 +11,7 @@ async function changepage(page){
     await sleep(2);
     fader1 -= 1;
   }
-  pc.style.display = 'none';
+  hideallpages();
 
   pc = document.getElementById(page);
   currentpage = page;
@@ -26,4 +26,12 @@ async function changepage(page){
     fader1 += 1;
   }
 
+}
+
+function hideallpages(){
+  document.getElementById('mainpage').style.display = 'none';
+  document.getElementById('aboutus').style.display = 'none';
+  document.getElementById('ourteam').style.display = 'none';
+  document.getElementById('artists').style.display = 'none';
+  document.getElementById('forms').style.display = 'none';
 }
