@@ -1,5 +1,10 @@
 async function changepage(page){
   // basically we fade out the current content and then change it up\
+
+  // cancel if same
+  if (currentpage == page){
+    return; //terminate
+  }
   let pc = document.getElementById(currentpage);
   const sleep = ms => new Promise(res => setTimeout(res, ms));
 
