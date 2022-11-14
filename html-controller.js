@@ -38,5 +38,4 @@ function hideallpages(){
   document.getElementById('aboutus').style.display = 'none';
   document.getElementById('ourteam').style.display = 'none';
   document.getElementById('artists').style.display = 'none';
-  document.getElementById('forms').style.display = 'none';
 }
