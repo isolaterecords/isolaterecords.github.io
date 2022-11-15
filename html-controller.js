@@ -1,4 +1,4 @@
-async function changepage(page){
+async function changepage(page,header){
   // basically we fade out the current content and then change it up\
 
   // cancel if same
@@ -7,6 +7,9 @@ async function changepage(page){
   }
   let pc = document.getElementById(currentpage);
   const sleep = ms => new Promise(res => setTimeout(res, ms));
+
+  disableheaders();
+  selectheader(header);
 
   let fader1 = 100;
   while (fader1 > 0){
@@ -38,4 +41,28 @@ function hideallpages(){
   document.getElementById('aboutus').style.display = 'none';
   document.getElementById('ourteam').style.display = 'none';
   document.getElementById('artists').style.display = 'none';
+}
+
+function selectheader(h){
+  let g = document.getElementById(h);
+  g.style.borderBottom = '4px solid rgb(0,0,0)';
+}
+
+function disableheaders(){
+  document.getElementById('header0').style.borderBottom = '2px solid rgb(255, 128, 0)';
+  document.getElementById('header1').style.borderBottom = '2px solid rgb(255, 128, 0)';
+  document.getElementById('header2').style.borderBottom = '2px solid rgb(255, 128, 0)';
+  document.getElementById('header3').style.borderBottom = '2px solid rgb(255, 128, 0)';
+}
+
+function showel(el,clr){
+  document.getElementById(el).style.color = clr;
+}
+
+function g(el){
+  return document.getElementById(el);
+}
+
+function setbg(el,bg){
+  document.getElementById(el).style.backgroundColor = bg;
 }

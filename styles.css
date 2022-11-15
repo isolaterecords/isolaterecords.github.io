@@ -1,7 +1,7 @@
 body {
   margin: 0;
   box-sizing: border-box;
-  background-image: linear-gradient(to bottom, black, black);
+  background-image: linear-gradient(to bottom, white, white);
   /* transition: background-color 0.25s linear; */
   overflow-x: hidden;
 }
@@ -11,11 +11,65 @@ body {
   list-style: none;
   margin-top: 1rem;
   padding: 0;
-  justify-content: right;
+}
+
+.nav-icons {
+  display: flex;
+  list-style: none;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+nav {
+  position: fixed;
+  top: 0px;
+  /* background-color: rgb(0,0,0); */
+  z-index: 50;
+  height: 55px;
+  width: 100%;
+}
+
+.nav-items li {
+  font-size: 40px;
+  display: inline-block;
+  color: white;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 30px;
+}
+
+
+.nav-icons li {
+  font-size: 40px;
+  display: inline-block;
+  color: white;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 30px;
+}
+
+.nav-items li a {
+  display: block;
+  color: rgb(60, 60, 60);
+  border-bottom: 2px solid rgb(255, 128, 0);
+  transition: border-color 0.5s, border-bottom-width 0.5s, color 0.5s;
+}
+
+.nav-icons li a {
+  display: block;
+  color: rgb(60, 60, 60);
+  /* border-bottom: 2px solid rgb(255, 128, 0); */
+  transition: border-color 0.5s, border-bottom-width 0.5s, color 0.5s;
+}
+
+.nav-items li a:hover{
+  display: block;
+  color: rgb(0, 0, 0);
+  border-color: rgb(255, 42, 0);
+  border-bottom-width: thick;
 }
 
 .header {
-  padding: 1rem;
   cursor: pointer;
   font-size: 1.5rem;
 }
@@ -72,6 +126,7 @@ a:hover {
 }
 
 .main-title{
+  padding-top: 70px;
   text-align: center;
 }
 
@@ -99,7 +154,7 @@ a:hover {
   float: center;
   width: 100%;
   height: 250px;
-  border: 3px solid white;
+  border: 3px solid black;
 }
 
 .fullwidth{
@@ -122,7 +177,7 @@ a:hover {
 
 .personname {
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 255);
 }
 
 .invis{
@@ -131,7 +186,7 @@ a:hover {
 
 .persondetails {
   text-align: center;
-  color: rgb(209, 209, 209);
+  color: rgb(61, 128, 244);
 }
 
 .blurb {

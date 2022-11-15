@@ -14,23 +14,48 @@
   <body>
     <script src="html-controller.js"></script>
 
-    <nav id="nav1">
+    <nav id="nav1" style='position: absolute; top:50px;' >
       <ul class="nav-items" id="nav">
-        <li><a id='header0' class="header" onclick="changepage('mainpage');">Home</a></li>
-        <li><a id='header1' class="header" onclick="changepage('aboutus');">About Us</a></li>
-        <li><a id='header2' class="header" onclick="changepage('artists');">Artists</a></li>
-        <li><a id='header3' class="header" onclick="changepage('ourteam');">Our Team</a></li>
+        <li><a id='header0' class="header" onclick="changepage('mainpage','header0');">Home</a></li>
+        <li><a id='header1' class="header" onclick="changepage('aboutus','header1');">About Us</a></li>
+        <li><a id='header2' class="header" onclick="changepage('artists','header2');">Artists</a></li>
+        <li><a id='header3' class="header" onclick="changepage('ourteam','header3');">Our Team</a></li>
       </ul> 
     </nav>
-  
+
+    <nav id="nav1" style="background-color: black; height:45px;">
+      <ul class="nav-icons" id="nav" style=" margin-top:0px; margin-bottom:0px;">
+        <li><a id="h" href="https://skparab1.github.io/agpbeats"><img src="images/mail.jpg" height="20px;"></a></li>
+        <li><h2 id='header0fade' class="header" onclick="changepage('mainpage','header0fade');" style="color:black; margin-top: 10px; margin-left: 50px;">Home</h2></li>
+        <li><h2 id='header1fade' class="header" onclick="changepage('aboutus','header1fade');" style="color:black; margin-top: 10px; margin-left: 50px;">About Us</h2></li>
+        <li><h2 id='header2fade' class="header" onclick="changepage('artists','header2fade');" style="color:black; margin-top: 10px; margin-left: 50px;">Artists</h2></li>
+        <li><h2 id='header3fade' class="header" onclick="changepage('ourteam','header3fade');" style="color:black; margin-top: 10px; margin-left: 50px;">Our Team</h2></li>
+      </ul> 
+    </nav>
+    <nav id="nav1" style="height:40px; justify-content: right; position:absolute; top:0px; position: fixed; top:0px; left:60%; width: 40%;">
+      <ul class="nav-icons" id="nav" style="justify-content:right; margin-top:0px; margin-bottom:0px; padding-bottom: 0px;">
+        <li><a id="e2" href="https://skparab1.github.io/agpbeats"><img src="images/instagram.png" height="20px;"></a></li>
+        <li><a id="h2" href="https://skparab1.github.io/agpbeats"><img src="images/linkedin.png" height="20px;"></a></li>
+        <li><a id="e3" href="https://skparab1.github.io/agpbeats"><img src="images/youtube.jpg" height="20px;"></a></li>
+
+
+        <!-- some overlays here -->
+        <div id="emailoverlay" style="position: fixed; background: rgba(255,0,0,0); margin-top:10px;" onclick="window.location.href='https:skparab1.github.io/agpbeats';" onmouseover="setbg('emailoverlay','rgba(40, 227, 11,0.5)')" onmouseleave="setbg('emailoverlay','rgba(40, 227, 11,0)')"></div>
+        <div id="instaoverlay" style="position: fixed; background: rgba(255,0,0,0); margin-top:10px;" onclick="window.location.href='https:skparab1.github.io/agpbeats';" onmouseover="setbg('instaoverlay','rgba(227, 11, 220,0.5)')" onmouseleave="setbg('instaoverlay','rgba(40, 227, 11,0)')"></div>
+        <div id="linkoverlay" style="position: fixed; background: rgba(255,0,0,0); margin-top:10px;" onclick="window.location.href='https:skparab1.github.io/agpbeats';" onmouseover="setbg('linkoverlay','rgba(11, 126, 227,0.5)')" onmouseleave="setbg('linkoverlay','rgba(40, 227, 11,0)')"></div>
+        <div id="youtubeoverlay" style="position: fixed; background: rgba(255,0,0,0); margin-top:10px;" onclick="window.location.href='https:skparab1.github.io/agpbeats';" onmouseover="setbg('youtubeoverlay','rgba(240, 13, 5,0.5)')" onmouseleave="setbg('youtubeoverlay','rgba(40, 227, 11,0)')"></div>
+
+      </ul> 
+    </nav>
+
     <div class='mainstuff' id="mainpage">
       <h1 id='head' class='main-title' >Isolate Records</h1>
-      <h2>tell that st||om||pi||ng|| b||a||tch||b||ass ritam to get the f||a||cking hell||o|| over here</h2>
+      <h2>welcome to isloate records</h2>
     </div>
 
     <div class='mainstuff' id="aboutus" style="opacity: 0;">
       <h1 id='head' class='main-title' >About Us</h1>
-      <h2>About us. Isolate records is a group of st||om||pi||ng b||a||tch||b||asses that do nothing all day</h2>
+      <h2>Abouts</h2>
     </div>
 
     <div class='mainstuff' id="ourteam" style="opacity: 0;">
@@ -61,7 +86,7 @@
       </div>
 
       <h1 class="invis">positions</h1>
-      <h1 class="blurb">Leaders</h1>
+      <h1 class="blurb">Specialists</h1>
 
       <div class="fullwidth">
         <div class="leftblock">
@@ -74,7 +99,7 @@
         <div class="rightblock">
           <div class="personblock">
             <img src="images/person.png" width="100%" height="100%">
-            <h3 class="personname">Arjun Arsunol whatshislastname</h3>
+            <h3 class="personname">Arjun Senthil</h3>
             <h4 class="persondetails">Pr Manager</h4>
           </div>
         </div>
@@ -125,9 +150,6 @@
       <h1 id='head' class='main-title' >Artists</h1>
       <h2 class="blurb">Isolate records has a lot of artists</h2>
       <br>
-
-      <h1 class="blurb">Singers</h1>
-
       <div class="fullwidth">
         <div class="leftblock">
           <div class="personblock">
@@ -146,7 +168,6 @@
       </div>
 
       <h1 class="invis">positions</h1>
-      <h1 class="blurb">Rappers</h1>
 
       <div class="fullwidth">
         <div class="leftblock">
