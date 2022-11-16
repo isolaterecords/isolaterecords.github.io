@@ -3,10 +3,10 @@
 const sleep = ms => new Promise(res => setTimeout(res, ms));
 
 function setoverlay(el,ovl){
-  ovl.style.top = el.offsetTop-6 +'px';
-  ovl.style.left = el.offsetLeft-1 +'px';
-  ovl.style.height = el.offsetHeight-17 +'px';
-  ovl.style.width = el.offsetWidth+2 +'px';
+  ovl.style.top = el.offsetTop/window.innerHeight +'%';
+  ovl.style.left = el.offsetLeft/window.innerWidth +'%';
+  ovl.style.height = el.offsetHeight +'px';
+  ovl.style.width = el.offsetWidth +'px';
 }
 
 function setoverlay2(el,ovl,left){
