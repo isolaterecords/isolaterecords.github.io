@@ -14,7 +14,7 @@
   <body>
     <script src="html-controller.js"></script>
 
-    <nav id="nav1" style='position: absolute; top:50px;' >
+    <nav id="nav1" style='position: absolute; top:50px; z-index: 1;' >
       <ul class="nav-items" id="nav">
         <li><a id='header0' class="header" onclick="changepage('mainpage','header0');">Home</a></li>
         <li><a id='header1' class="header" onclick="changepage('aboutus','header1');">About Us</a></li>
@@ -23,9 +23,17 @@
       </ul> 
     </nav>
 
-    <nav id="nav1" style="background-color: black; height:45px;">
+    <!-- some overlays here -->
+    <div id="emailoverlay" style="z-index: 3; position: fixed; background: rgba(255,255,255,1); margin-top:10px;" onmouseover="setbg('emailoverlay','rgba(40, 227, 11,0.5)')" onmouseleave="setbg('emailoverlay','rgba(255,255,255,1)')"></div>
+    <div id="instaoverlay" style="z-index: 3; position: fixed; background: rgba(255,255,255,1); margin-top:10px;" onclick="window.location.href='https:skparab1.github.io/agpbeats';" onmouseover="setbg('instaoverlay','rgba(227, 11, 220,0.5)')" onmouseleave="setbg('instaoverlay','rgba(40, 227, 11,0)')"></div>
+    <div id="linkoverlay" style="z-index: 3; position: fixed; background: rgba(255,255,255,1); margin-top:10px;" onclick="window.location.href='https:skparab1.github.io/agpbeats';" onmouseover="setbg('linkoverlay','rgba(11, 126, 227,0.5)')" onmouseleave="setbg('linkoverlay','rgba(40, 227, 11,0)')"></div>
+    <div id="youtubeoverlay" style="z-index: 3; position: fixed; background: rgba(255,255,255,1); margin-top:10px;" onclick="window.location.href='https:skparab1.github.io/agpbeats';" onmouseover="setbg('youtubeoverlay','rgba(240, 13, 5,0.5)')" onmouseleave="setbg('youtubeoverlay','rgba(40, 227, 11,0)')"></div>
+
+    <nav id="nav1" style="background-color: rgb(0,0,0); height:45px; z-index: 2;"></nav>
+
+    <nav id="nav1" style="background-color: rgba(0,0,0,0); height:45px;">
       <ul class="nav-icons" id="nav" style=" margin-top:0px; margin-bottom:0px;">
-        <li><a id="h" href="https://skparab1.github.io/agpbeats"><img src="images/mail.jpg" height="20px;"></a></li>
+        <li><a id="h" href="https://skparab1.github.io/agpbeats"><img src="images/mail.png" height="30px;" onmouseover="setbg('emailoverlay','rgba(40, 227, 11,1)'); console.log('over');" onmouseleave="setbg('emailoverlay','rgba(255,255,255,1)')" ></a></li>
         <li><h2 id='header0fade' class="header" onclick="changepage('mainpage','header0fade');" style="color:black; margin-top: 10px; margin-left: 50px;">Home</h2></li>
         <li><h2 id='header1fade' class="header" onclick="changepage('aboutus','header1fade');" style="color:black; margin-top: 10px; margin-left: 50px;">About Us</h2></li>
         <li><h2 id='header2fade' class="header" onclick="changepage('artists','header2fade');" style="color:black; margin-top: 10px; margin-left: 50px;">Artists</h2></li>
@@ -34,23 +42,20 @@
     </nav>
     <nav id="nav1" style="height:40px; justify-content: right; position:absolute; top:0px; position: fixed; top:0px; left:60%; width: 40%;">
       <ul class="nav-icons" id="nav" style="justify-content:right; margin-top:0px; margin-bottom:0px; padding-bottom: 0px;">
-        <li><a id="e2" href="https://skparab1.github.io/agpbeats"><img src="images/instagram.png" height="20px;"></a></li>
-        <li><a id="h2" href="https://skparab1.github.io/agpbeats"><img src="images/linkedin.png" height="20px;"></a></li>
-        <li><a id="e3" href="https://skparab1.github.io/agpbeats"><img src="images/youtube.jpg" height="20px;"></a></li>
-
-
-        <!-- some overlays here -->
-        <div id="emailoverlay" style="position: fixed; background: rgba(255,0,0,0); margin-top:10px;" onclick="window.location.href='https:skparab1.github.io/agpbeats';" onmouseover="setbg('emailoverlay','rgba(40, 227, 11,0.5)')" onmouseleave="setbg('emailoverlay','rgba(40, 227, 11,0)')"></div>
-        <div id="instaoverlay" style="position: fixed; background: rgba(255,0,0,0); margin-top:10px;" onclick="window.location.href='https:skparab1.github.io/agpbeats';" onmouseover="setbg('instaoverlay','rgba(227, 11, 220,0.5)')" onmouseleave="setbg('instaoverlay','rgba(40, 227, 11,0)')"></div>
-        <div id="linkoverlay" style="position: fixed; background: rgba(255,0,0,0); margin-top:10px;" onclick="window.location.href='https:skparab1.github.io/agpbeats';" onmouseover="setbg('linkoverlay','rgba(11, 126, 227,0.5)')" onmouseleave="setbg('linkoverlay','rgba(40, 227, 11,0)')"></div>
-        <div id="youtubeoverlay" style="position: fixed; background: rgba(255,0,0,0); margin-top:10px;" onclick="window.location.href='https:skparab1.github.io/agpbeats';" onmouseover="setbg('youtubeoverlay','rgba(240, 13, 5,0.5)')" onmouseleave="setbg('youtubeoverlay','rgba(40, 227, 11,0)')"></div>
-
+        <li><a id="e2" href="https://skparab1.github.io/agpbeats"><img src="images/inst.png" height="20px;" onmouseover="setbg('instaoverlay','rgba(227, 11, 220,1)'); console.log('over');" onmouseleave="setbg('instaoverlay','rgba(255,255,255,1)')" ></a></li>
+        <li><a id="h2" href="https://skparab1.github.io/agpbeats"><img src="images/linkedin.png" height="20px;" onmouseover="setbg('linkoverlay','rgba( 11, 126, 227,1)'); console.log('over');" onmouseleave="setbg('linkoverlay','rgba(255,255,255,1)')" ></a></li>
+        <li><a id="e3" href="https://skparab1.github.io/agpbeats"><img src="images/youtube.png" height="20px;" onmouseover="setbg('youtubeoverlay','rgba( 240, 13, 5,1)'); console.log('over');" onmouseleave="setbg('youtubeoverlay','rgba(255,255,255,1)')"></a></li>
       </ul> 
     </nav>
 
-    <div class='mainstuff' id="mainpage">
-      <h1 id='head' class='main-title' >Isolate Records</h1>
-      <h2>welcome to isloate records</h2>
+    <div class='mainstuff' id="mainpage" style="text-align: center;">
+      <h5 id='head' class='main-title' style="padding-top: 100px; padding-bottom: 0px; line-height: 0px; color: #ba86f6;">nonprofit record label</h5>
+      <h1 id='head' class='main-title' style="padding-top: 0px; line-height: 50px; color: #1fb8ae" >Isolate Records</h1>
+      <button class="big-button" style="text-align: center; margin-bottom:100px;" onclick="changepage('mainpage','header0fade');">View Artists</button>
+      <br>
+
+      <a href="https://form.jotform.com/223187079679068">link to sign up as an artist</a>
+      <embed type="text/html" src="https://form.jotform.com/223187079679068" width="90%" height="1000px"> 
     </div>
 
     <div class='mainstuff' id="aboutus" style="opacity: 0;">

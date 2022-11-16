@@ -48,6 +48,24 @@ nav {
   padding-bottom: 30px;
 }
 
+.big-button{
+  /* height: 75px; */
+  /* width: 100px; */
+  background-color: #0cc1f1ff;
+  text-align: center;
+  font-size: 35px;
+  height: 50px;
+  border-radius: 25px;
+  color: white;
+  border: 3px solid black;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.big-button:hover{
+  background-color: #6bcde7ff;
+}
+
 .nav-items li a {
   display: block;
   color: rgb(60, 60, 60);

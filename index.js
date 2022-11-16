@@ -3,17 +3,17 @@
 const sleep = ms => new Promise(res => setTimeout(res, ms));
 
 function setoverlay(el,ovl){
-  ovl.style.top = el.offsetTop +'px';
-  ovl.style.left = el.offsetLeft +'px';
-  ovl.style.height = el.offsetHeight-20 +'px';
-  ovl.style.width = el.offsetWidth +'px';
+  ovl.style.top = el.offsetTop-6 +'px';
+  ovl.style.left = el.offsetLeft-1 +'px';
+  ovl.style.height = el.offsetHeight-17 +'px';
+  ovl.style.width = el.offsetWidth+2 +'px';
 }
 
-function setoverlay2(el,ovl){
-  ovl.style.top = el.offsetTop +'px';
-  ovl.style.left = (el.offsetLeft+window.innerWidth*0.593) +'px';
-  ovl.style.height = el.offsetHeight-20 +'px';
-  ovl.style.width = el.offsetWidth+3 +'px';
+function setoverlay2(el,ovl,left){
+  ovl.style.top = el.offsetTop+5 +'px';
+  ovl.style.left = (el.offsetLeft+window.innerWidth*left) +'px';
+  ovl.style.height = el.offsetHeight-30 +'px';
+  ovl.style.width = el.offsetWidth-1 +'px';
 }
 
 //vars
@@ -29,9 +29,9 @@ var currentpage = 'mainpage';
   let bgfader = 0;
 
   setoverlay(g('h'),g('emailoverlay'));
-  setoverlay2(g('h2'),g('instaoverlay'));
-  setoverlay2(g('e2'),g('linkoverlay'));
-  setoverlay2(g('e3'),g('youtubeoverlay'));
+  setoverlay2(g('h2'),g('instaoverlay'),0.57);
+  setoverlay2(g('e2'),g('linkoverlay'),0.617);
+  setoverlay2(g('e3'),g('youtubeoverlay'),0.5934);
 
   while (true){
     // hehe
