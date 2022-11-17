@@ -3,10 +3,10 @@
 const sleep = ms => new Promise(res => setTimeout(res, ms));
 
 function setoverlay(el,ovl){
-  ovl.style.top = el.offsetTop/window.innerHeight +'%';
-  ovl.style.left = el.offsetLeft/window.innerWidth +'%';
-  ovl.style.height = el.offsetHeight +'px';
-  ovl.style.width = el.offsetWidth +'px';
+  ovl.style.top = el.offsetTop-6 +'px';
+  ovl.style.left = el.offsetLeft-1 +'px';
+  ovl.style.height = el.offsetHeight-17 +'px';
+  ovl.style.width = el.offsetWidth+2 +'px';
 }
 
 function setoverlay2(el,ovl,left){
@@ -28,11 +28,6 @@ var currentpage = 'mainpage';
 
   let bgfader = 0;
 
-  setoverlay(g('h'),g('emailoverlay'));
-  setoverlay2(g('h2'),g('instaoverlay'),0.57);
-  setoverlay2(g('e2'),g('linkoverlay'),0.617);
-  setoverlay2(g('e3'),g('youtubeoverlay'),0.5934);
-
   while (true){
     // hehe
     if (bgfader < 100){
@@ -40,6 +35,17 @@ var currentpage = 'mainpage';
       bgfader += 0.5;
       //document.body.style.backgroundImage = 'linear-gradient(to bottom, rgb('+(bgfader/100*194)+', '+(bgfader/100*124)+', '+(bgfader/100*4)+'), rgb('+(bgfader/100*164)+', '+(bgfader/100*63)+', 0)';
     }
+
+    //lets not
+    // if (currentpage == 'mainpage'){
+    //   settopborder('h00');
+    // } else if (currentpage == 'aboutus'){
+    //   settopborder('h01');
+    // } else if (currentpage == 'artists'){
+    //   settopborder('h02');
+    // } else if (currentpage == 'ourteam'){
+    //   settopborder('h03');
+    // }
 
     counter2 += 6;
 

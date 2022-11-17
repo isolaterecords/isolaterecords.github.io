@@ -66,3 +66,19 @@ function g(el){
 function setbg(el,bg){
   document.getElementById(el).style.backgroundColor = bg;
 }
+
+function changesrc(el,src){
+  document.getElementById(el).src = src;
+}
+
+function resetborders(){
+  document.getElementById("h00").style.borderTop = '0px solid orangered';
+  document.getElementById("h01").style.borderTop = '0px solid orangered';
+  document.getElementById("h02").style.borderTop = '0px solid orangered';
+  document.getElementById("h03").style.borderTop = '0px solid orangered';
+}
+
+function settopborder(el){
+  resetborders();
+  document.getElementById(el).style.borderTop = '3px solid orangered';
+}
