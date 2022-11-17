@@ -3,21 +3,16 @@
 const sleep = ms => new Promise(res => setTimeout(res, ms));
 
 function setoverlay(el,ovl){
-  ovl.style.top = el.offsetTop-6 +'px';
-  ovl.style.left = el.offsetLeft-1 +'px';
-  ovl.style.height = el.offsetHeight-17 +'px';
-  ovl.style.width = el.offsetWidth+2 +'px';
-}
-
-function setoverlay2(el,ovl,left){
-  ovl.style.top = el.offsetTop+5 +'px';
-  ovl.style.left = (el.offsetLeft+window.innerWidth*left) +'px';
-  ovl.style.height = el.offsetHeight-30 +'px';
-  ovl.style.width = el.offsetWidth-1 +'px';
+  ovl.style.top = el.offsetTop +'px';
+  ovl.style.left = el.offsetLeft-51 +'px';
+  ovl.style.height = el.offsetHeight +'px';
+  ovl.style.width = el.offsetWidth+ 50 +'px';
 }
 
 //vars
 var currentpage = 'mainpage';
+var showmail1 = false;
+var hidemail1 = false;
 
 (async () => {
   let counter2 = 0;
@@ -25,6 +20,8 @@ var currentpage = 'mainpage';
   head.style.left = (window.innerWidth/2-head.offsetWidth/2)+"px";
   let pg = document.getElementById(currentpage);
   pg.style.display = 'none';
+
+  setoverlay(g("i0"),g('mailhover'));
 
   let bgfader = 0;
 
@@ -48,6 +45,28 @@ var currentpage = 'mainpage';
     // }
 
     counter2 += 6;
+
+    // mail animations
+    if (showmail1){
+      let y = g('mailhover');
+
+      console.log('showing', y.offsetLeft);
+
+      if (y.offsetLeft < 75){
+        y.style.left = y.offsetLeft+(90-y.offsetLeft)/25 + 'px';
+      } else {
+        showmail1 = false;
+      }
+    } else if (hidemail1){
+      let y = g('mailhover');
+    
+      console.log('hiding');
+      if (y.offsetLeft > -50){
+        y.style.left = y.offsetLeft-(y.offsetLeft+100)/50 + 'px';
+      } else {
+        hidemail1 = false;
+      }
+    }
 
     showel('header0fade','rgb('+(window.scrollY-55)*10+','+(window.scrollY-55)*10+','+(window.scrollY-55)*10+')');
     showel('header1fade','rgb('+(window.scrollY-55)*10+','+(window.scrollY-55)*10+','+(window.scrollY-55)*10+')');

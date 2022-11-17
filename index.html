@@ -27,11 +27,10 @@
 
     <nav id="nav1" class="nav-icon">
       <ul class="nav-icons" id="nav" style=" margin-top:0px; margin-bottom:0px;">
-        <li><a id="h" href="https://skparab1.github.io/agpbeats">
-          <span title="Email us at whatever">
-            <img id='i0' src="images/mail.png" height="30px;" onmouseover="changesrc('i0','images/mailhover.png');" onmouseleave="changesrc('i0','images/mail.png');" >
-          </span>
+        <li><a id="h" href="https://skparab1.github.io/agpbeats" onmouseover="showmail();" onmouseleave="hidemail();">
+          <img id='i0' src="images/mail.png" height="30px;" onmouseover="changesrc('i0','images/mailhover.png');" onmouseleave="changesrc('i0','images/mail.png'); hidemail();" >
         </a></li>
+        <li><h2 class="header"></h2></li>
         <li id="h00"><h2 id='header0fade' class="header" onclick="changepage('mainpage','header0fade');">Home</h2></li>
         <li id="h01"><h2 id='header1fade' class="header" onclick="changepage('aboutus','header1fade');">About Us</h2></li>
         <li id="h02"><h2 id='header2fade' class="header" onclick="changepage('artists','header2fade');">Artists</h2></li>
@@ -39,12 +38,15 @@
       </ul> 
     </nav>
     <nav id="nav1" style="height:40px; justify-content: right; position:absolute; top:0px; position: fixed; top:0px; left:60%; width: 40%;">
-      <ul class="nav-icons" id="nav" style="justify-content:right; margin-top:0px; margin-bottom:0px; padding-bottom: 0px;">
+        <ul class="nav-icons" id="nav" style="justify-content:right; margin-top:0px; margin-bottom:0px; padding-bottom: 0px;">
         <li><a id="e2" href="https://skparab1.github.io/agpbeats"><img id='i1' src="images/instagram.png" height="20px;" onmouseover="changesrc('i1','images/instagramhover.png');" onmouseleave="changesrc('i1','images/instagram.png');" ></a></li>
         <li><a id="h2" href="https://skparab1.github.io/agpbeats"><img id='i2' src="images/linkedin.png" height="20px;" onmouseover="changesrc('i2','images/linkedinhover.png');" onmouseleave="changesrc('i2','images/linkedin.png');" ></a></li>
         <li><a id="e3" href="https://skparab1.github.io/agpbeats"><img id='i3' src="images/youtube.png" height="20px;" onmouseover="changesrc('i3','images/youtubehover.png');" onmouseleave="changesrc('i3','images/youtube.png');"></a></li>
       </ul> 
     </nav>
+
+    <div id="bigoverlay" class="corneroverlay"></div>
+    <div id='mailhover' class="mailhover">email us e@gmail.com</div>
 
     <div class='mainstuff' id="mainpage" style="text-align: center;">
       <h5 id='head' class='main-title' style="padding-top: 100px; padding-bottom: 0px; line-height: 0px; color: #ba86f6;">Nonprofit Record Label</h5>

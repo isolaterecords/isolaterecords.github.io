@@ -82,3 +82,11 @@ function settopborder(el){
   resetborders();
   document.getElementById(el).style.borderTop = '3px solid orangered';
 }
+
+function showmail(){
+  showmail1 = true;
+}
+
+function hidemail(){
+  hidemail1 = true;
+}
