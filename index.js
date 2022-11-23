@@ -14,6 +14,18 @@ var currentpage = 'mainpage';
 var showmail1 = false;
 var hidemail1 = false;
 
+var ur = window.location.href;
+if (ur.includes('#aboutus')){
+  hideallpages();
+  changepage('aboutus','header1fade');
+} else if (ur.includes('#artists')){
+  hideallpages();
+  changepage('artists','header2fade');
+} else if (ur.includes('#ourteam')){
+  hideallpages();
+  changepage('ourteam','header3fade');
+}
+
 (async () => {
   let counter2 = 0;
   let head = document.getElementById('head');

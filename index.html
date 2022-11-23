@@ -45,6 +45,8 @@
       </ul> 
     </nav>
 
+    <h6 class="invis-small">positions</h6>
+
     <div id="bigoverlay" class="corneroverlay"></div>
     <div id='mailhover' class="mailhover">email us e@gmail.com</div>
 
@@ -55,9 +57,8 @@
         <button class="big-button" style="text-align: center; margin-bottom:100px;" onclick="changepage('artists','header2fade');">View Artists</button>
         <br>
       </div>
-      <h1 class="invis">positions</h1>
 
-      <div class="box">
+      <div class="box" style="margin-top: 100px;">
         <div class="leftbox">
           <div class="leftbox">
             <h6 class="invis-small">positions</h6>
@@ -84,20 +85,62 @@
         </div>
       </div>
 
-      <h1 class="invis">positions</h1>
+      <div class="box" style="margin-top: 500px; background: rgba(205, 205, 205,0);">
+        <h2 class="blurb" style="text-align: left;">Top Artists</h2>
+        <div class="small-link" onclick="changepage('artists','header2fade');">View All artists →</div>
+        <div class="linething"></div>
+        <div class="box">
+          <div class="tinyblock" style="margin-left:10%;">
+            <h2 class="blurb">AGP</h2>
+            <img src="images/person.png" width="100px">
+            <button class="hbutton">View Music</button>
+          </div>
+          <div class="tinyblock" style="margin-left:6.5%;">
+            <h2 class="blurb">Bobraja</h2>
+            <img src="images/person.png" width="100px">
+            <button class="hbutton">View Music</button>
+          </div>
+          <div class="tinyblock" style="margin-left:6.5%;">
+            <h2 class="blurb">Snek</h2>
+            <img src="images/person.png" width="100px">
+            <button class="hbutton">View Music</button>
+          </div>
+        </div>
+      </div>
 
-    
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdAxanksmIRrUtu3_7EQC_srNufiGpX3d6dCI82Zw1O8y_EvA/viewform">Link to sign up as an Artist</a>
-      <embed type="text/html" src="https://docs.google.com/forms/d/e/1FAIpQLSdAxanksmIRrUtu3_7EQC_srNufiGpX3d6dCI82Zw1O8y_EvA/viewform" width="90%" height="1000px"> 
+      <div class="box" style="margin-top: 350px; background: rgba(0,0,0,0);">
+        <h2 class="blurb">Check out our forms!</h2>
+        <div class="leftbox" style="background: rgb(203, 203, 203);">
+          <h6 class="invis-small">positions</h6>     
+          <a href='https://docs.google.com/forms/d/e/1FAIpQLSdAxanksmIRrUtu3_7EQC_srNufiGpX3d6dCI82Zw1O8y_EvA/viewform'>
+            <h3 class="whitetextlink">Artist Form</h3>
+          </a>
+          <embed type="text/html" src="https://docs.google.com/forms/d/e/1FAIpQLSdAxanksmIRrUtu3_7EQC_srNufiGpX3d6dCI82Zw1O8y_EvA/viewform" width="80%" height="500px" style="margin-left: 10%; margin-right: 10%;"> 
+        </div>
+        <div class="rightbox" style="background: rgb(203, 203, 203);">
+          <h6 class="invis-small">positions</h6>     
+          <a href='https://docs.google.com/forms/d/e/1FAIpQLSecbAs1XMXxZeOsaHk58DI55kpLR0jbQ9RoQsw_YfHLj9MRFQ/viewform?usp=sf_link'>
+            <h3 class="whitetextlink">Employee Form</h3>
+          </a>
+          <embed type="text/html" src="https://docs.google.com/forms/d/e/1FAIpQLSecbAs1XMXxZeOsaHk58DI55kpLR0jbQ9RoQsw_YfHLj9MRFQ/viewform?usp=sf_link" width="80%" height="500px" style="margin-left: 10%; margin-right: 10%;"> 
+        </div>
+      </div>
     </div>
 
-    <div class='mainstuff' id="aboutus" style="opacity: 0;">
-      <h1 id='head' class='main-title' >About Us</h1>
-      <h2>Abouts</h2>
+    <div class='mainstuff' id="aboutus" style="opacity: 0; display: none;">
+      <h1 id='head' class='main-title' >Our Mission</h1>
+      <h3 class="blurb">We at Isolate Records are a nonprofit pushing student-created art and raising awareness and money for marginalized causes using whatever proceeds we make. This creates an outlet not only to benefit the community but also for students to express themselves, and earn volunteer hours while doing so. We were motivated by our interests in development and art.</h3>
 
+      <h6 class="invis-small">positions</h6>     
+      <h2 >Our Youtube Channel</h2>
+      <div class="partline"></div>
+      <h3 class="blurb">In our youtube channel, we post videos.</h3>
+      <a href='https://www.youtube.com/channel/UCjL-OJZ5HpYy2I_-boxBVbA'>
+        <button class="hbutton" style="margin-left:40%; width: 20%;">View channel</button>
+      </a>
     </div>
 
-    <div class='mainstuff' id="ourteam" style="opacity: 0;">
+    <div class='mainstuff' id="ourteam" style="opacity: 0; display: none;">
       <h1 id='head' class='main-title' >Our Team</h1>
 
       <h2 class="blurb">At Isolate Records, we are comitted to helping out our fellow High School students publish their music.
@@ -192,7 +235,7 @@
 
     </div>
 
-    <div class='mainstuff' id="artists" style="opacity: 0;">
+    <div class='mainstuff' id="artists" style="opacity: 0; display: none;">
       <h1 id='head' class='main-title' >Artists</h1>
       <h2 class="blurb">Isolate records has a lot of artists</h2>
       <br>
