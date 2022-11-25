@@ -32,7 +32,7 @@ let tbox = document.getElementById('tbox');
 
 console.log(vbox.offsetTop);
 
-vbox.style.marginTop = window.innerHeight-tbox.offsetHeight-100+'px';
+vbox.style.marginTop = window.innerHeight-tbox.offsetHeight+'px';
 
 ovt.style.top = vbox.offsetTop+tbox.marginTop+150+'px';
 
