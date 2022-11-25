@@ -26,6 +26,13 @@ if (ur.includes('#aboutus')){
   changepage('ourteam','header3fade');
 }
 
+let ovt = document.getElementById('ovl-t');
+let vbox = document.getElementById('vbox');
+
+console.log(vbox.offsetTop);
+
+ovt.style.top = vbox.offsetTop+100+'px';
+
 (async () => {
   let counter2 = 0;
   let head = document.getElementById('head');
