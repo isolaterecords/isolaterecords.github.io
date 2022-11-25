@@ -28,8 +28,14 @@ async function changepage(page,header){
   if (page == 'mainpage'){
     document.body.style.backgroundImage = "url('images/large-banner.png')";
     document.getElementById('ovl-t').style.display = 'block';
-  } else {
-    document.body.style.backgroundImage = "linear-gradient(white,white)";
+  } else if (page == 'aboutus'){
+    document.body.style.backgroundImage = "url('images/orange.png')";
+    document.getElementById('ovl-t').style.display = 'none';
+  } else if (page == 'artists'){
+    document.body.style.backgroundImage = "url('images/purple.png')";
+    document.getElementById('ovl-t').style.display = 'none';
+  } else if (page == 'ourteam'){
+    document.body.style.backgroundImage = "url('images/lightblue.png')";
     document.getElementById('ovl-t').style.display = 'none';
   }
 

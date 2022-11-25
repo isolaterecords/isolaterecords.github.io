@@ -3,7 +3,7 @@ body {
   box-sizing: border-box;
   background: linear-gradient(to bottom, transparent, rgba(0,0,0,0)),
   url("images/large-banner.png");
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-position-y: 50px;
   background-size: contain;
   background-attachment: fixed;
@@ -414,6 +414,11 @@ a {
   left: 10%;
   opacity: 0;
   display: none;
+  background: rgba(225,225,225,0.85); 
+  border-radius: 25px;
+  padding: 5%; 
+  padding-top: 0px; 
+  margin-left: -5%;
 }
 
 .mainstuffmain{
