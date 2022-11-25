@@ -587,3 +587,17 @@ a {
   cursor: pointer;
   margin-bottom: 2rem;
 }
+
+#backtotop {
+  position: fixed; 
+  right: 2.5%;
+  bottom: 0;
+  width: 64px;
+  aspect-ratio: 1 / 1;
+  z-index: 2;
+  border-radius: 50%;
+  border: 3px black solid;
+  background-color: rgb(47, 224, 255);
+  font-size: 2.5rem;
+  cursor: pointer;
+}
