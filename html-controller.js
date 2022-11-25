@@ -25,15 +25,26 @@ async function changepage(page,header){
   currentpage = page;
   pc.style.display = 'block';
 
+  if (page == 'mainpage'){
+    document.body.style.backgroundImage = "url('images/large-banner.png')";
+  } else {
+    document.body.style.backgroundImage = "linear-gradient(white,white)";
+  }
+
   fader1 = 0;
   while (fader1 < 100){
 
+    // if (page == 'mainpage'){
+    //   document.body.style.backgroundImage = "linear-gradient(to bottom, transparent, rgba(0,0,0,"+(100-fader1)+")),url('images/large-banner.png')";
+    // } else {
+    //   document.body.style.backgroundImage = "linear-gradient(to bottom, transparent, rgba(255,255,255,"+(100-fader1)+")),url('images/large-banner.png')";
+    // }
+    
     pc.style.opacity = fader1/100;
 
     await sleep(2);
     fader1 += 1;
   }
-
 }
 
 function hideallpages(){
