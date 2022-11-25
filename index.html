@@ -23,9 +23,9 @@
       </ul> 
     </nav>
 
-    <nav id="nav1" class="nav-colored"></nav>
+    <nav id="nav2" class="nav-colored"></nav>
 
-    <nav id="nav1" class="nav-icon">
+    <nav id="nav3" class="nav-icon">
       <ul class="nav-icons" id="nav" style="margin-top:0px; margin-bottom:0px;">
         <li><a id="h" href="mailto:skparab@gmail.com" onmouseover="showmail();" onmouseleave="hidemail();">
           <img id='i0' src="images/mail.png" height="30px;" onmouseover="changesrc('i0','images/mailhover.png');" onmouseleave="changesrc('i0','images/mail.png'); hidemail();" >
@@ -52,16 +52,20 @@
 
     <div class='ovl-t' id="ovl-t"></div>
 
+    <img id="backtotop" src="images/arrow-up.png" width="75px" style="position: fixed; left: 93%; top: 85%; z-index: 2;" onclick="document.getElementById('nav1').scrollIntoView({behavior: 'smooth'});">
+
     <div class='mainstuffmain' id="mainpage">
       
-      <div class="box">
+      <div class="box" id="tbox">
         <h2 id='head' class='main-title-np'>Nonprofit Record Label</h2>
         <h1 id='head' class='main-title-big'>Isolate Records</h1>
         <button class="big-button-at" onclick="changepage('artists','header2fade');">View Artists</button>
         <br>
+        <img src="images/arrow-down.png" width="75px" style="margin-top: -50px;" onclick="document.getElementById('vbox').scrollIntoView({behavior: 'smooth'});">
+        <br>
       </div>
 
-      <div id='vbox' class="box" style="margin-top: 100px;">
+      <div id='vbox' class="box">
         <div class="leftbox">
           <div class="leftbox">
             <h6 class="invis-small">positions</h6>

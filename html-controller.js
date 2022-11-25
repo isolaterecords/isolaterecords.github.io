@@ -27,8 +27,10 @@ async function changepage(page,header){
 
   if (page == 'mainpage'){
     document.body.style.backgroundImage = "url('images/large-banner.png')";
+    document.getElementById('ovl-t').style.display = 'block';
   } else {
     document.body.style.backgroundImage = "linear-gradient(white,white)";
+    document.getElementById('ovl-t').style.display = 'none';
   }
 
   fader1 = 0;

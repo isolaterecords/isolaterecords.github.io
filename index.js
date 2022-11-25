@@ -28,10 +28,14 @@ if (ur.includes('#aboutus')){
 
 let ovt = document.getElementById('ovl-t');
 let vbox = document.getElementById('vbox');
+let tbox = document.getElementById('tbox');
 
 console.log(vbox.offsetTop);
 
-ovt.style.top = vbox.offsetTop+100+'px';
+vbox.style.marginTop = window.innerHeight-tbox.offsetHeight-100+'px';
+
+ovt.style.top = vbox.offsetTop+tbox.marginTop+150+'px';
+
 
 (async () => {
   let counter2 = 0;
@@ -62,6 +66,10 @@ ovt.style.top = vbox.offsetTop+100+'px';
     // } else if (currentpage == 'ourteam'){
     //   settopborder('h03');
     // }
+
+    if (window.scrollY <= 100){
+      document.getElementById('backtotop').style.top = ((100-window.scrollY)/100*15)+85+'%'; //85 max
+    }
 
     counter2 += 6;
 
