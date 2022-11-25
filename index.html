@@ -26,7 +26,7 @@
     <nav id="nav1" class="nav-colored"></nav>
 
     <nav id="nav1" class="nav-icon">
-      <ul class="nav-icons" id="nav" style=" margin-top:0px; margin-bottom:0px;">
+      <ul class="nav-icons" id="nav" style="margin-top:0px; margin-bottom:0px;">
         <li><a id="h" href="mailto:skparab@gmail.com" onmouseover="showmail();" onmouseleave="hidemail();">
           <img id='i0' src="images/mail.png" height="30px;" onmouseover="changesrc('i0','images/mailhover.png');" onmouseleave="changesrc('i0','images/mail.png'); hidemail();" >
         </a></li>
@@ -37,7 +37,7 @@
         <li id="h03"><h2 id='header3fade' class="header" onclick="changepage('ourteam','header3fade');">Our Team</h2></li>
       </ul> 
     </nav>
-    <nav id="nav1" style="height:40px; justify-content: right; position:absolute; top:0px; position: fixed; top:0px; left:60%; width: 40%;">
+    <nav id="nav1" class="nav-t">
         <ul class="nav-icons" id="nav" style="justify-content:right; margin-top:0px; margin-bottom:0px; padding-bottom: 0px;">
         <li><a id="e2" href="https://skparab1.github.io/agpbeats"><img id='i1' src="images/instagram.png" height="20px;" onmouseover="changesrc('i1','images/instagramhover.png');" onmouseleave="changesrc('i1','images/instagram.png');" ></a></li>
         <li><a id="h2" href="https://skparab1.github.io/agpbeats"><img id='i2' src="images/linkedin.png" height="20px;" onmouseover="changesrc('i2','images/linkedinhover.png');" onmouseleave="changesrc('i2','images/linkedin.png');" ></a></li>
@@ -50,11 +50,14 @@
     <div id="bigoverlay" class="corneroverlay"></div>
     <div id='mailhover' class="mailhover">email us e@gmail.com</div>
 
-    <div class='mainstuff' id="mainpage" style="text-align: center; margin-top: 100px;">
+    <div class='ovl-t'></div>
+
+    <div class='mainstuffmain' id="mainpage">
+      
       <div class="box">
-        <h2 id='head' class='main-title' style="padding-top: 75px; padding-bottom: 25px; line-height: 0px; color: #323233;">Nonprofit Record Label</h2>
-        <h1 id='head' class='main-title' style="padding-top: 0px; line-height: 50px; color: black; font-family: planet-kosmos;" >Isolate Records</h1>
-        <button class="big-button" style="text-align: center; margin-top: 25px; margin-bottom:75px;" onclick="changepage('artists','header2fade');">View Artists</button>
+        <h2 id='head' class='main-title-np'>Nonprofit Record Label</h2>
+        <h1 id='head' class='main-title-big'>Isolate Records</h1>
+        <button class="big-button-at" onclick="changepage('artists','header2fade');">View Artists</button>
         <br>
       </div>
 
@@ -85,22 +88,22 @@
         </div>
       </div>
 
-      <div class="box" style="margin-top: 500px; background: rgba(205, 205, 205,0);">
+      <div class="box-artists">
         <h2 class="blurb" style="text-align: left;">Top Artists</h2>
-        <div class="small-link" onclick="changepage('artists','header2fade');">View All artists →</div>
+        <div class="small-link" onclick="changepage('artists','header2fade');">View All Artists →</div>
         <div class="linething"></div>
         <div class="box">
-          <div class="tinyblock" style="margin-left:10%;">
+          <div class="tinyblock-starter">
             <h2 class="blurb">AGP</h2>
             <img src="images/person.png" width="100px">
             <button class="hbutton">View Music</button>
           </div>
-          <div class="tinyblock" style="margin-left:6.5%;">
+          <div class="tinyblock">
             <h2 class="blurb">Bob Raka</h2>
             <img src="images/person.png" width="100px">
             <button class="hbutton">View Music</button>
           </div>
-          <div class="tinyblock" style="margin-left:6.5%;">
+          <div class="tinyblock">
             <h2 class="blurb">Snek</h2>
             <img src="images/person.png" width="100px">
             <button class="hbutton">View Music</button>
@@ -108,26 +111,26 @@
         </div>
       </div>
 
-      <div class="box" style="margin-top: 350px; background: rgba(0,0,0,0);">
+      <div class="box-forms">
         <h2 class="blurb">Check out our forms!</h2>
-        <div class="leftbox" style="background: rgb(203, 203, 203);">
+        <div class="leftbox-forms">
           <h6 class="invis-small">positions</h6>     
           <a href='https://docs.google.com/forms/d/e/1FAIpQLSdAxanksmIRrUtu3_7EQC_srNufiGpX3d6dCI82Zw1O8y_EvA/viewform'>
             <h3 class="whitetextlink">Artist Form</h3>
           </a>
-          <embed type="text/html" src="https://docs.google.com/forms/d/e/1FAIpQLSdAxanksmIRrUtu3_7EQC_srNufiGpX3d6dCI82Zw1O8y_EvA/viewform" width="80%" height="500px" style="margin-left: 10%; margin-right: 10%;"> 
+          <embed class='gform' type="text/html" src="https://docs.google.com/forms/d/e/1FAIpQLSdAxanksmIRrUtu3_7EQC_srNufiGpX3d6dCI82Zw1O8y_EvA/viewform" width="80%" height="500px"> 
         </div>
-        <div class="rightbox" style="background: rgb(203, 203, 203);">
+        <div class="rightbox-forms">
           <h6 class="invis-small">positions</h6>     
           <a href='https://docs.google.com/forms/d/e/1FAIpQLSecbAs1XMXxZeOsaHk58DI55kpLR0jbQ9RoQsw_YfHLj9MRFQ/viewform?usp=sf_link'>
             <h3 class="whitetextlink">Employee Form</h3>
           </a>
-          <embed type="text/html" src="https://docs.google.com/forms/d/e/1FAIpQLSecbAs1XMXxZeOsaHk58DI55kpLR0jbQ9RoQsw_YfHLj9MRFQ/viewform?usp=sf_link" width="80%" height="500px" style="margin-left: 10%; margin-right: 10%;"> 
+          <embed class='gform' type="text/html" src="https://docs.google.com/forms/d/e/1FAIpQLSecbAs1XMXxZeOsaHk58DI55kpLR0jbQ9RoQsw_YfHLj9MRFQ/viewform?usp=sf_link" width="80%" height="500px"> 
         </div>
       </div>
     </div>
 
-    <div class='mainstuff' id="aboutus" style="opacity: 0; display: none;">
+    <div class='mainstuffinvs' id="aboutus">
       <h1 id='head' class='main-title' >Our Mission</h1>
       <h3 class="blurb">We at Isolate Records are a nonprofit pushing student-created art and raising awareness and money for marginalized causes using whatever proceeds we make. This creates an outlet not only to benefit the community but also for students to express themselves, and earn volunteer hours while doing so. We were motivated by our interests in development and art.</h3>
 
@@ -140,7 +143,7 @@
       </a>
     </div>
 
-    <div class='mainstuff' id="ourteam" style="opacity: 0; display: none;">
+    <div class='mainstuffinvs' id="ourteam">
       <h1 id='head' class='main-title' >Our Team</h1>
 
       <h2 class="blurb">At Isolate Records, we are comitted to helping out our fellow High School students publish their music.
@@ -235,7 +238,7 @@
 
     </div>
 
-    <div class='mainstuff' id="artists" style="opacity: 0; display: none;">
+    <div class='mainstuffinvs' id="artists">
       <h1 id='head' class='main-title' >Artists</h1>
       <br>
       <h2 class="blurb">Editors</h2>
@@ -273,7 +276,7 @@
       </div>
 
       <h1 class="invis">positions</h1>
-      <h2 class="blurb">Vocalist</h2>
+      <h2 class="blurb">Vocalists</h2>
 
       <div class="fullwidth">
         <div class="leftblock">
