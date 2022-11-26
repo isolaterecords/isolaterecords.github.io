@@ -237,10 +237,17 @@ nav {
   margin-bottom: 10px;
 }
 
-.nav-icon li:hover{
-  border-top: 1px solid orangered;
+.headertop{
+  color: white;
+  font-size: 25px;
+  margin-top: 10px;
+  margin-left: 50px;
+  transition: border-bottom 0.2s;
 }
 
+.headertop:hover{
+  border-bottom: 3px solid orangered;
+}
 
 .big-button{
   font-family: roboto-regular; 
@@ -421,6 +428,10 @@ a {
   margin-left: -5%;
 }
 
+.rtop{
+  
+}
+
 .mainstuffmain{
   font-family: roboto-regular; 
   position: relative;
@@ -564,7 +575,7 @@ a {
 
 .mailhover {
   height: 50px;
-  width:100px;
+  width: 150px;
   background: rgba(0,0,0,0);
   color: rgb(40, 227, 11);
   position: fixed;
