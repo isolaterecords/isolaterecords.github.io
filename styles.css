@@ -42,6 +42,7 @@ body {
   list-style: none;
   margin-top: 1rem;
   padding: 0;
+  cursor: pointer;
 }
 
 .nav-icons {
@@ -50,6 +51,7 @@ body {
   list-style: none;
   margin-top: 1rem;
   padding: 0;
+  cursor: pointer;
 }
 
 .nav-t{
@@ -60,8 +62,7 @@ body {
   position: fixed; 
   top:0px; 
   left:60%; 
-  width: 40%;
-}
+  width: 40%;}
 
 .ovl-t{
   z-index: 1; 
@@ -106,6 +107,7 @@ body {
   border-bottom: 2px solid rgb(187, 187, 187);
   margin-left: 86%;
   transition: border-bottom 0.2s;
+  cursor: pointer;
 }
 
 .small-link:hover{
@@ -165,6 +167,7 @@ body {
   text-align: center;
   margin-bottom: 25px;
   transition: background-color 0.2s;
+  cursor: pointer;
 }
 
 .hbutton:hover{
@@ -181,6 +184,7 @@ body {
   border: 3px solid white;
   text-align: center;
   margin-bottom: 25px;
+  cursor: pointer;
 }
 
 nav {
@@ -224,6 +228,7 @@ nav {
   padding-right: 7px;
   padding-bottom: 30px;
   margin-top: -15px;
+  cursor: pointer;
 }
 
 
@@ -235,6 +240,7 @@ nav {
   padding-left: 5px;
   padding-right: 5px;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .headertop{
@@ -475,6 +481,7 @@ a {
   border: 3px solid white;
   text-align: center;
   transition: background-color 0.2s;
+  cursor: pointer;
 }
 
 .monobutton:hover{
