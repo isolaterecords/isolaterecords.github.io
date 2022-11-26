@@ -33,10 +33,14 @@ async function changepage(page,header){
     document.getElementById('ovl-t').style.display = 'none';
   } else if (page == 'artists'){
     document.body.style.backgroundImage = "url('images/purple.png')";
-    document.getElementById('ovl-t').style.display = 'none';
+    document.getElementById('ovl-t').style.display = 'block';
+    document.getElementById('ovl-t').style.zIndex = -1;
+    document.getElementById('ovl-t').style.height = 1150+'px';
   } else if (page == 'ourteam'){
     document.body.style.backgroundImage = "url('images/lightblue.png')";
-    document.getElementById('ovl-t').style.display = 'none';
+    document.getElementById('ovl-t').style.display = 'block';
+    document.getElementById('ovl-t').style.zIndex = -1;
+    document.getElementById('ovl-t').style.height = 2000+'px';
   }
 
   fader1 = 0;
