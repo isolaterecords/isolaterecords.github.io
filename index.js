@@ -30,10 +30,12 @@ let ovt = document.getElementById('ovl-t');
 let vbox = document.getElementById('vbox');
 let tbox = document.getElementById('tbox');
 let pc = document.getElementById('pc');
+let ouryt = document.getElementById('ouryt');
 
 console.log(vbox.offsetTop);
 
 vbox.style.marginTop = window.innerHeight-tbox.offsetHeight+'px';
+ouryt.style.marginTop = window.innerHeight-tbox.offsetHeight+100+'px';
 
 ovt.style.top = vbox.offsetTop+tbox.marginTop+150+'px';
 
