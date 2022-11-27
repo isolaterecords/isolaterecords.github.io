@@ -29,6 +29,7 @@ if (ur.includes('#aboutus')){
 let ovt = document.getElementById('ovl-t');
 let vbox = document.getElementById('vbox');
 let tbox = document.getElementById('tbox');
+let pc = document.getElementById('pc');
 
 console.log(vbox.offsetTop);
 
@@ -36,13 +37,14 @@ vbox.style.marginTop = window.innerHeight-tbox.offsetHeight+'px';
 
 ovt.style.top = vbox.offsetTop+tbox.marginTop+150+'px';
 
-
 (async () => {
   let counter2 = 0;
   let head = document.getElementById('head');
   head.style.left = (window.innerWidth/2-head.offsetWidth/2)+"px";
   let pg = document.getElementById(currentpage);
   pg.style.display = 'none';
+
+  let e = 0;
 
   setoverlay(g("i0"),g('mailhover'));
 
@@ -100,6 +102,16 @@ ovt.style.top = vbox.offsetTop+tbox.marginTop+150+'px';
     showel('header2fade','rgb('+(window.scrollY-55)*10+','+(window.scrollY-55)*10+','+(window.scrollY-55)*10+')');
     showel('header3fade','rgb('+(window.scrollY-55)*10+','+(window.scrollY-55)*10+','+(window.scrollY-55)*10+')');
     
+    if (e % 10 == 0){
+      let h = Math.max( document.body.scrollHeight, document.body.offsetHeight);
+
+      //pc.offsetheight+pc.offsettop is the total height we want it at
+      ovt.style.height = ((h-ovt.offsetTop)+50)+'px';
+
+    }
+
+    e += 1;
+
     await sleep(2);
   }
 })();
