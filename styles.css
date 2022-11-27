@@ -81,6 +81,14 @@ body {
   z-index: 10;
 }
 
+.vbox{
+  border-radius: 25px; 
+  background: rgb(225,225,225);
+  width: 100%;
+  z-index: 10;
+  height: auto;
+}
+
 .box-forms{
   border-radius: 25px; 
   background: rgb(225,225,225);
