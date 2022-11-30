@@ -84,9 +84,11 @@ body {
 .box-white{
   background-color: rgb(215, 215, 215);
   border-radius: 25px;
-  padding: 25px;
+  padding: 5%;
   margin-top: 100px;
   padding-top: 50px;
+  width: 80%;
+  margin-left: 7.5%;
 }
 
 .vbox{
@@ -463,8 +465,6 @@ a {
 .mainstuffblank{
   font-family: roboto-regular; 
   position: relative;
-  width: 80%;
-  left: 10%;
   opacity: 0;
   display: none;
   background: rgba(225,225,225,0); 
