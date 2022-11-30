@@ -31,11 +31,15 @@ let vbox = document.getElementById('vbox');
 let tbox = document.getElementById('tbox');
 let pc = document.getElementById('pc');
 let ouryt = document.getElementById('ouryt');
+let starter1 = document.getElementById('starter1');
+let starter2 = document.getElementById('starter2');
 
 console.log(vbox.offsetTop);
 
 vbox.style.marginTop = window.innerHeight-tbox.offsetHeight+'px';
 ouryt.style.marginTop = window.innerHeight-tbox.offsetHeight+100+'px';
+starter1.style.marginTop = window.innerHeight-tbox.offsetHeight+100+'px';
+starter2.style.marginTop = window.innerHeight-tbox.offsetHeight+100+'px';
 
 ovt.style.top = vbox.offsetTop+tbox.marginTop+150+'px';
 
