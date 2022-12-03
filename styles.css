@@ -643,6 +643,10 @@ a {
   margin-bottom: 2rem;
 }
 
+.scroll-down:hover {
+  background-color: #8127db;
+}
+
 #backtotop {
   position: fixed; 
   right: 2.5%;
@@ -655,4 +659,8 @@ a {
   background-color: #b178eb;
   font-size: 2.5rem;
   cursor: pointer;
+}
+
+#backtotop:hover {
+  background-color: #8127db;
 }
