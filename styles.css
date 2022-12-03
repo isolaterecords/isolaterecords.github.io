@@ -136,7 +136,7 @@ body {
   width: 100%;
   height: 50px;
   margin-top: 50px;
-  border-top: 3px solid rgb(47, 224, 255);
+  border-top: 3px solid #b178eb;
 }
 
 .partline{
@@ -144,7 +144,7 @@ body {
   height: 10px;
   margin-top: 15px;
   margin-left:0px;
-  border-top: 3px solid rgb(27, 213, 238);
+  border-top: 3px solid #8127db;
 }
 
 .tinyblock{
@@ -176,7 +176,7 @@ body {
 }
 
 .hbutton{
-  background-color: rgb(47, 224, 255);
+  background-color: #b178eb;
   color: white;
   border-radius: 25px;
   width: 70%;
@@ -189,11 +189,11 @@ body {
 }
 
 .hbutton:hover{
-  background-color: #6bcde7ff;
+  background-color: #8127db;
 }
 
 .hbuttonlite{
-  background-color: rgb(47, 224, 255);
+  background-color: #b178eb;
   color: white;
   border-radius: 25px;
   width: 70%;
@@ -270,14 +270,14 @@ nav {
 }
 
 .headertop:hover{
-  border-bottom: 3px solid orangered;
+  border-bottom: 3px solid #8127db;
 }
 
 .big-button{
   font-family: roboto-regular; 
   /* height: 75px; */
   /* width: 100px; */
-  background-color: #0cc1f1ff;
+  background-color: #b178eb;
   text-align: center;
   font-size: 35px;
   height: 50px;
@@ -290,14 +290,14 @@ nav {
 }
 
 .big-button:hover{
-  background-color: #6bcde7ff;
+  background-color: #8127db;
 }
 
 .big-button-at{
   font-family: roboto-regular; 
   /* height: 75px; */
   /* width: 100px; */
-  background-color: #0cc1f1ff;
+  background-color: #b178eb;
   text-align: center;
   font-size: 35px;
   height: 50px;
@@ -311,7 +311,7 @@ nav {
 }
 
 .big-button-at:hover{
-  background-color: #6bcde7ff;
+  background-color: #8127db;
 }
 
 
@@ -319,7 +319,7 @@ nav {
   font-family: roboto-regular; 
   display: block;
   color: rgb(60, 60, 60);
-  border-bottom: 2px solid rgb(255, 128, 0);
+  border-bottom: 2px solid #b178eb;
   transition: border-color 0.5s, border-bottom-width 0.5s, color 0.5s;
 }
 
@@ -334,7 +334,7 @@ nav {
 .nav-items li a:hover{
   display: block;
   color: rgb(0, 0, 0);
-  border-color: rgb(255, 42, 0);
+  border-color: #b178eb;
   border-bottom-width: thick;
 }
 
@@ -493,7 +493,7 @@ a {
   font-size: 25px;
   width: 50%;
   margin-left: 25%;
-  border-bottom: 2px solid rgb(77, 214, 251);
+  border-bottom: 2px solid #b178eb;
 }
 
 .monobutton{
@@ -557,7 +557,7 @@ a {
   float: left;
   text-align: right;  
   margin-right: 2.25%;
-  background-color: rgb(70, 197, 247);
+  background-color: #b178eb;
   border-radius: 25px;
 }
 
@@ -566,7 +566,7 @@ a {
   float: left;
   text-align: right;  
   margin-right: 2.25%;
-  background-color: rgb(70, 197, 247);
+  background-color: #b178eb;
   border-radius: 25px;
   background: rgb(203, 203, 203);
 }
@@ -576,7 +576,7 @@ a {
   float: right;
   text-align: left;
   margin-left: 2.25%;
-  background-color: rgb(70, 197, 247);
+  background-color: #b178eb;
   border-radius: 25px;
 }
 
@@ -585,7 +585,7 @@ a {
   float: right;
   text-align: left;
   margin-left: 2.25%;
-  background-color: rgb(70, 197, 247);
+  background-color: #b178eb;
   border-radius: 25px;
   background: rgb(203, 203, 203);
 }
@@ -598,7 +598,7 @@ a {
 .personname {
   font-family: roboto-regular; 
   text-align: center;
-  color: rgb(0, 0, 255);
+  color: #8127db;
 }
 
 .invis{
@@ -609,7 +609,7 @@ a {
 .persondetails {
   font-family: roboto-regular; 
   text-align: center;
-  color:rgb(61, 128, 244);
+  color: #b178eb;
 }
 
 .mailhover {
@@ -633,7 +633,7 @@ a {
 }
 
 .scroll-down {
-  background-color: rgb(47, 224, 255);
+  background-color: #b178eb;
   border-radius: 50%;
   width: 64px;
   aspect-ratio: 1 / 1;
@@ -652,7 +652,7 @@ a {
   z-index: 2;
   border-radius: 50%;
   border: 3px black solid;
-  background-color: rgb(47, 224, 255);
+  background-color: #b178eb;
   font-size: 2.5rem;
   cursor: pointer;
 }
