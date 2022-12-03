@@ -645,6 +645,7 @@ a {
 
 .scroll-down:hover {
   background-color: #8127db;
+  color: white;
 }
 
 #backtotop {
@@ -663,4 +664,5 @@ a {
 
 #backtotop:hover {
   background-color: #8127db;
+  color: white;
 }
