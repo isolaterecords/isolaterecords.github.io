@@ -22,12 +22,15 @@ body {
   --darkcontrast: rgb(230,230,230);
   --lightslight: rgb(255,255,255);
   --darkslight: rgb(0,0,0);
+  --lightunderline: #118a88;
+  --darkunderline: #cf5dfc;
 
   --bg: rgb(230, 230, 230);
   --main: rgb(27, 213, 238);
   --accent: #6bcde7ff;
   --contrast: rgb(230,230,230);
   --slight: rgb(255,255,255);
+  --underline: #118a88;
 }
 
 @font-face {
@@ -159,7 +162,7 @@ body {
 }
 
 .small-link:hover{
-  border-bottom: 2px solid #cf5dfc;
+  border-bottom: 2px solid var(--underline);
 }
 
 .linething{
@@ -439,6 +442,7 @@ a {
   font-family: roboto-regular; 
   padding-top: 70px;
   text-align: center;
+  color: var(--contrast);
 }
 
 .main-title-np{
@@ -512,7 +516,7 @@ a {
 }
 
 .blurb {
-  color: var(--main);
+  color: var(--contrast);
   font-family: roboto-regular; 
   text-align: center;
   transition: color 0.2s;
@@ -537,21 +541,22 @@ a {
 }
 
 .monobutton{
-  background-color: black;
-  color: white;
+  background-color: var(--bg);
+  color: var(--contrast);
   border-radius: 25px;
   width: 70%;
   font-size: 30px;
   margin-right: 15%;
   text-align: center;
-  border: 3px solid black;
-  transition: background-color 0.2s, color 0.2s;
+  border: 3px solid var(--contrast);
+  transition: background-color 0.2s, color 0.2s, border 0.2s;
   cursor: pointer;
 }
 
 .monobutton:hover{
-  background-color: #595859;
-  color: white;
+  background-color: var(--slight);
+  color: var(--main);
+  border: 3px solid var(--main);
 }
 
 .invis-small{

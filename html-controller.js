@@ -174,6 +174,8 @@ function settheme(timediff){
       r.style.setProperty('--contrast', holder);
       holder = rs.getPropertyValue('--darkslight')
       r.style.setProperty('--slight', holder);
+      holder = rs.getPropertyValue('--darkunderline')
+      r.style.setProperty('--underline', holder);
     } else {
       let holder = rs.getPropertyValue('--lightbg')
       r.style.setProperty('--bg', holder);
@@ -185,6 +187,8 @@ function settheme(timediff){
       r.style.setProperty('--contrast', holder);
       holder = rs.getPropertyValue('--lightslight')
       r.style.setProperty('--slight', holder);
+      holder = rs.getPropertyValue('--lightunderline')
+      r.style.setProperty('--underline', holder);
     }
 
   }
