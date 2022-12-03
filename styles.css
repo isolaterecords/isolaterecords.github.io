@@ -16,7 +16,7 @@ body {
   --darkbg: rgb(46, 46, 46);
   --lightmain: rgb(27, 213, 238);
   --darkmain: #b178eb;
-  --lightaccent: #141475;
+  --lightaccent: #2f2feb;
   --darkaccent: #8127db;
   --lightcontrast: rgb(45,45,45);
   --darkcontrast: rgb(230,230,230);
@@ -203,11 +203,11 @@ body {
 }
 
 .tinyblock:hover{
-  box-shadow: 5px -5px rgb(176, 176, 176);
+  box-shadow: 0px 0px 10px 10px rgb(121, 121, 121);
 }
 
 .tinyblock-starter:hover{
-  box-shadow: 5px -5px rgb(176, 176, 176);
+  box-shadow: 0px 0px 10px 10px rgb(121, 121, 121);
 }
 
 .hbutton{
