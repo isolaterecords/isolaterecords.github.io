@@ -13,6 +13,13 @@ function setoverlay(el,ovl){
 var currentpage = 'mainpage';
 var showmail1 = false;
 var hidemail1 = false;
+var theme = localStorage.getItem('theme');
+if (theme == null){
+  theme = 'light';
+  localStorage.setItem('theme','light');
+} else if (theme == 'dark' || true){
+  toggletheme();
+}
 
 var ur = window.location.href;
 if (ur.includes('#aboutus')){

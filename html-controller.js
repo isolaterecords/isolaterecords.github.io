@@ -1,3 +1,5 @@
+const { locals } = require("../../../../first_micro");
+
 async function changepage(page,header){
   // basically we fade out the current content and then change it up\
 
@@ -134,4 +136,39 @@ function showmail(){
 
 function hidemail(){
   hidemail1 = true;
+}
+
+function toggletheme(){
+  if (theme == 'light'){
+    theme = 'dark';
+    localStorage.setItem('theme','dark');
+    var r = document.querySelector(':root');
+    var rs = getComputedStyle(r);
+    let holder = rs.getPropertyValue('--darkbg')
+    r.style.setProperty('--bg', holder);
+    holder = rs.getPropertyValue('--darkmain')
+    r.style.setProperty('--main', holder);
+    holder = rs.getPropertyValue('--darkaccent')
+    r.style.setProperty('--accent', holder);
+    holder = rs.getPropertyValue('--darkcontrast')
+    r.style.setProperty('--contrast', holder);
+    holder = rs.getPropertyValue('--darkslight')
+    r.style.setProperty('--slight', holder);
+    
+  } else {
+    theme = 'light';
+    localStorage.setItem('theme','light');
+    var r = document.querySelector(':root');
+    var rs = getComputedStyle(r);
+    let holder = rs.getPropertyValue('--lightbg')
+    r.style.setProperty('--bg', holder);
+    holder = rs.getPropertyValue('--lightmain')
+    r.style.setProperty('--main', holder);
+    holder = rs.getPropertyValue('--lightaccent')
+    r.style.setProperty('--accent', holder);
+    holder = rs.getPropertyValue('--lightcontrast')
+    r.style.setProperty('--contrast', holder);
+    holder = rs.getPropertyValue('--lightslight')
+    r.style.setProperty('--slight', holder);
+  }
 }

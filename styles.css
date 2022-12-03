@@ -11,6 +11,25 @@ body {
   overflow-x: hidden;
 }
 
+:root {
+  --lightbg: rgb(230, 230, 230);
+  --darkbg: rgb(46, 46, 46);
+  --lightmain: rgb(27, 213, 238);
+  --darkmain: #b178eb;
+  --lightaccent: #6bcde7ff;
+  --darkaccent: #8127db;
+  --lightcontrast: rgb(45,45,45);
+  --darkcontrast: rgb(230,230,230);
+  --lightslight: rgb(255,255,255);
+  --darkslight: rgb(0,0,0);
+
+  --bg: rgb(230, 230, 230);
+  --main: rgb(27, 213, 238);
+  --accent: #6bcde7ff;
+  --contrast: rgb(230,230,230);
+  --slight: rgb(255,255,255);
+}
+
 @font-face {
   font-family: fragment-mono;
   src: url(fonts/FragmentMono-Regular.ttf);
@@ -65,8 +84,9 @@ body {
   width: 40%;}
 
 .ovl-t{
+  background-color: var(--bg);
   z-index: 1; 
-  background: rgb(230, 230, 230); 
+  opacity: 1;
   position: absolute; 
   top:100%; 
   left: 0%; 
@@ -76,13 +96,13 @@ body {
 
 .box{
   border-radius: 25px; 
-  background: rgb(225,225,225);
+  background: var(--bg);
   width: 100%;
   z-index: 10;
 }
 
 .box-white{
-  background-color: rgb(215, 215, 215);
+  background-color: var(--bg);
   border-radius: 25px;
   padding: 5%;
   margin-top: 100px;
@@ -93,7 +113,7 @@ body {
 
 .vbox{
   border-radius: 25px; 
-  background: rgb(225,225,225);
+  background: var(--bg);
   width: 100%;
   z-index: 10;
   height: auto;
@@ -101,7 +121,7 @@ body {
 
 .box-forms{
   border-radius: 25px; 
-  background: rgb(225,225,225);
+  background: var(--bg);
   width: 100%;
   z-index: 10;
   margin-top: 350px; 
@@ -111,7 +131,7 @@ body {
 
 .box-artists{
   border-radius: 25px; 
-  background: rgb(225,225,225);
+  background: var(--bg);
   width: 100%;
   z-index: 10;
   padding-top: 300px;
@@ -122,7 +142,7 @@ body {
   width: 14%;
   margin-top: -50px;
   text-align: right;
-  border-bottom: 2px solid rgb(187, 187, 187);
+  border-bottom: 2px solid var(--bg);
   margin-left: 86%;
   transition: border-bottom 0.2s;
   cursor: pointer;
@@ -136,7 +156,7 @@ body {
   width: 100%;
   height: 50px;
   margin-top: 50px;
-  border-top: 3px solid #b178eb;
+  border-top: 3px solid var(--main);
 }
 
 .partline{
@@ -144,12 +164,12 @@ body {
   height: 10px;
   margin-top: 15px;
   margin-left:0px;
-  border-top: 3px solid #8127db;
+  border-top: 3px solid var(--accent);
 }
 
 .tinyblock{
   width: 22%;
-  background: rgb(255, 255, 255);
+  background: var(--slight);
   border-radius: 25px;
   text-align: center;
   float: left;
@@ -159,7 +179,7 @@ body {
 
 .tinyblock-starter{
   width: 22%;
-  background: rgb(255, 255, 255);
+  background: var(--slight);
   border-radius: 25px;
   text-align: center;
   float: left;
@@ -176,7 +196,7 @@ body {
 }
 
 .hbutton{
-  background-color: #b178eb;
+  background-color: var(--main);
   color: white;
   border-radius: 25px;
   width: 70%;
@@ -189,11 +209,11 @@ body {
 }
 
 .hbutton:hover{
-  background-color: #8127db;
+  background-color: var(--accent);
 }
 
 .hbuttonlite{
-  background-color: #b178eb;
+  background-color: var(--main);
   color: white;
   border-radius: 25px;
   width: 70%;
@@ -220,7 +240,7 @@ nav {
   position: absolute; 
   top:50px; 
   z-index: 1;
-  background-color: rgb(237, 237, 237);
+  background-color: var(--bg);
   height: 50px;
 }
 
@@ -270,14 +290,14 @@ nav {
 }
 
 .headertop:hover{
-  border-bottom: 3px solid #8127db;
+  border-bottom: 3px solid var(--accent);
 }
 
 .big-button{
   font-family: roboto-regular; 
   /* height: 75px; */
   /* width: 100px; */
-  background-color: #b178eb;
+  background-color: var(--main);
   text-align: center;
   font-size: 35px;
   height: 50px;
@@ -290,14 +310,14 @@ nav {
 }
 
 .big-button:hover{
-  background-color: #8127db;
+  background-color: var(--accent);
 }
 
 .big-button-at{
   font-family: roboto-regular; 
   /* height: 75px; */
   /* width: 100px; */
-  background-color: #b178eb;
+  background-color: var(--main);
   text-align: center;
   font-size: 35px;
   height: 50px;
@@ -311,30 +331,30 @@ nav {
 }
 
 .big-button-at:hover{
-  background-color: #8127db;
+  background-color: var(--accent);
 }
 
 
 .nav-items li a {
   font-family: roboto-regular; 
   display: block;
-  color: rgb(60, 60, 60);
-  border-bottom: 2px solid #b178eb;
+  color: var(--contrast);
+  border-bottom: 2px solid var(--main);
   transition: border-color 0.5s, border-bottom-width 0.5s, color 0.5s;
 }
 
 .nav-icons li a {
   font-family: roboto-regular; 
   display: block;
-  color: rgb(60, 60, 60);
+  color: var(--contrast);
   /* border-bottom: 2px solid rgb(255, 128, 0); */
   transition: border-color 0.5s, border-bottom-width 0.5s, color 0.5s;
 }
 
 .nav-items li a:hover{
   display: block;
-  color: rgb(0, 0, 0);
-  border-color: #b178eb;
+  color: var(--contrast);
+  border-color: var(--accent);
   border-bottom-width: thick;
 }
 
@@ -475,6 +495,7 @@ a {
 }
 
 .blurb {
+  color: var(--contrast);
   font-family: roboto-regular; 
   text-align: center;
 }
@@ -493,7 +514,7 @@ a {
   font-size: 25px;
   width: 50%;
   margin-left: 25%;
-  border-bottom: 2px solid #b178eb;
+  border-bottom: 2px solid var(--main);
 }
 
 .monobutton{
@@ -557,7 +578,7 @@ a {
   float: left;
   text-align: right;  
   margin-right: 2.25%;
-  background-color: #b178eb;
+  background-color: var(--main);
   border-radius: 25px;
 }
 
@@ -566,7 +587,7 @@ a {
   float: left;
   text-align: right;  
   margin-right: 2.25%;
-  background-color: #b178eb;
+  background-color: var(--main);
   border-radius: 25px;
   background: rgb(203, 203, 203);
 }
@@ -576,7 +597,7 @@ a {
   float: right;
   text-align: left;
   margin-left: 2.25%;
-  background-color: #b178eb;
+  background-color: var(--main);
   border-radius: 25px;
 }
 
@@ -585,7 +606,7 @@ a {
   float: right;
   text-align: left;
   margin-left: 2.25%;
-  background-color: #b178eb;
+  background-color: var(--main);
   border-radius: 25px;
   background: rgb(203, 203, 203);
 }
@@ -598,7 +619,7 @@ a {
 .personname {
   font-family: roboto-regular; 
   text-align: center;
-  color: #8127db;
+  color: var(--accent);
 }
 
 .invis{
@@ -609,7 +630,8 @@ a {
 .persondetails {
   font-family: roboto-regular; 
   text-align: center;
-  color: #b178eb;
+  color: var(--main);
+  padding-bottom: 15px;
 }
 
 .mailhover {
@@ -633,7 +655,7 @@ a {
 }
 
 .scroll-down {
-  background-color: #b178eb;
+  background-color: var(--main);
   border-radius: 50%;
   width: 64px;
   aspect-ratio: 1 / 1;
@@ -645,7 +667,7 @@ a {
 }
 
 .scroll-down:hover {
-  background-color: #8127db;
+  background-color: var(--accent);
   color: white;
 }
 
@@ -658,13 +680,73 @@ a {
   z-index: 2;
   border-radius: 50%;
   border: 3px black solid;
-  background-color: #b178eb;
+  background-color: var(--main);
   font-size: 2.5rem;
   cursor: pointer;
   transition: color 0.2s, background-color 0.2s;
 }
 
 #backtotop:hover {
-  background-color: #8127db;
+  background-color: var(--accent);
   color: white;
 }
+
+.switch {
+  position: relative;
+  display: inline-block;
+  margin-top: 15px;
+  width: 45px;
+  height: 23px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--contrast);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--slight);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--accent);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--accent);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(22px);
+  -ms-transform: translateX(22px);
+  transform: translateX(22px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+} 
