@@ -17,9 +17,11 @@ var theme = localStorage.getItem('theme');
 if (theme == null){
   theme = 'light';
   localStorage.setItem('theme','light');
-} else if (theme == 'dark' || true){
-  toggletheme();
 }
+
+let lasttoggle = new Date();
+
+settheme(1000);
 
 var ur = window.location.href;
 if (ur.includes('#aboutus')){

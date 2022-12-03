@@ -62,6 +62,8 @@ body {
   margin-top: 1rem;
   padding: 0;
   cursor: pointer;
+  color: var(--bg);
+  transition: color 0.2s;
 }
 
 .nav-icons {
@@ -81,7 +83,8 @@ body {
   position: fixed; 
   top:0px; 
   left:60%; 
-  width: 40%;}
+  width: 40%;
+}
 
 .ovl-t{
   background-color: var(--bg);
@@ -92,6 +95,7 @@ body {
   left: 0%; 
   width: 100%; 
   padding: 0px;
+  transition: background-color 0.2s;
 }
 
 .box{
@@ -99,6 +103,7 @@ body {
   background: var(--bg);
   width: 100%;
   z-index: 10;
+  transition: background-color 0.2s;
 }
 
 .box-white{
@@ -109,6 +114,7 @@ body {
   padding-top: 50px;
   width: 80%;
   margin-left: 8%;
+  transition: background-color 0.2s;
 }
 
 .vbox{
@@ -117,6 +123,7 @@ body {
   width: 100%;
   z-index: 10;
   height: auto;
+  transition: background-color 0.2s;
 }
 
 .box-forms{
@@ -127,6 +134,7 @@ body {
   margin-top: 350px; 
   background: rgba(0,0,0,0); 
   z-index: 2;
+  transition: background-color 0.2s;
 }
 
 .box-artists{
@@ -136,20 +144,22 @@ body {
   z-index: 10;
   padding-top: 300px;
   background: rgba(205, 205, 205,0);
+  transition: background-color 0.2s;
 }
 
 .small-link{
   width: 14%;
   margin-top: -50px;
   text-align: right;
-  border-bottom: 2px solid var(--bg);
+  border-bottom: 2px solid var(--contrast);
+  color: var(--contrast);
   margin-left: 86%;
   transition: border-bottom 0.2s;
   cursor: pointer;
 }
 
 .small-link:hover{
-  border-bottom: 2px solid #097f94;
+  border-bottom: 2px solid #cf5dfc;
 }
 
 .linething{
@@ -157,6 +167,7 @@ body {
   height: 50px;
   margin-top: 50px;
   border-top: 3px solid var(--main);
+  transition: border-top 0.2s;
 }
 
 .partline{
@@ -165,6 +176,7 @@ body {
   margin-top: 15px;
   margin-left:0px;
   border-top: 3px solid var(--accent);
+  transition: border-top 0.2s;
 }
 
 .tinyblock{
@@ -175,6 +187,7 @@ body {
   float: left;
   transition: box-shadow 0.2s;
   margin-left:6.5%;
+  transition: background-color 0.2s;
 }
 
 .tinyblock-starter{
@@ -183,8 +196,8 @@ body {
   border-radius: 25px;
   text-align: center;
   float: left;
-  transition: box-shadow 0.2s;
-  margin-left:10%;
+  transition: box-shadow 0.2s, background-color 0.2s;
+  margin-left: 10%;
 }
 
 .tinyblock:hover{
@@ -223,6 +236,7 @@ body {
   text-align: center;
   margin-bottom: 25px;
   cursor: pointer;
+  transition: background-color 0.2s;
 }
 
 nav {
@@ -242,6 +256,7 @@ nav {
   z-index: 1;
   background-color: var(--bg);
   height: 50px;
+  transition: background-color 0.2s;
 }
 
 .nav-colored{
@@ -261,12 +276,13 @@ nav {
   font-family: roboto-regular; 
   font-size: 40px;
   display: inline-block;
-  color: white;
+  color: var(--accent);
   padding-left: 7px;
   padding-right: 7px;
   padding-bottom: 30px;
   margin-top: -15px;
   cursor: pointer;
+  transition: color 0.2s;
 }
 
 
@@ -274,11 +290,12 @@ nav {
   font-family: roboto-regular; 
   font-size: 40px;
   display: inline-block;
-  color: white;
+  color: var(--accent);
   padding-left: 5px;
   padding-right: 5px;
   margin-bottom: 10px;
   cursor: pointer;
+  transition: color 0.2s;
 }
 
 .headertop{
@@ -338,22 +355,22 @@ nav {
 .nav-items li a {
   font-family: roboto-regular; 
   display: block;
-  color: var(--contrast);
-  border-bottom: 2px solid var(--main);
+  color: var(--main);
+  border-bottom: 2px solid var(--accent);
   transition: border-color 0.5s, border-bottom-width 0.5s, color 0.5s;
 }
 
 .nav-icons li a {
   font-family: roboto-regular; 
   display: block;
-  color: var(--contrast);
+  color: var(--bg);
   /* border-bottom: 2px solid rgb(255, 128, 0); */
   transition: border-color 0.5s, border-bottom-width 0.5s, color 0.5s;
 }
 
 .nav-items li a:hover{
   display: block;
-  color: var(--contrast);
+  color: var(--darkaccent);
   border-color: var(--accent);
   border-bottom-width: thick;
 }
@@ -495,9 +512,10 @@ a {
 }
 
 .blurb {
-  color: var(--contrast);
+  color: var(--main);
   font-family: roboto-regular; 
   text-align: center;
+  transition: color 0.2s;
 }
 
 .whitetext {
@@ -515,23 +533,25 @@ a {
   width: 50%;
   margin-left: 25%;
   border-bottom: 2px solid var(--main);
+  transition: border-bottom 0.2s;
 }
 
 .monobutton{
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
   border-radius: 25px;
   width: 70%;
   font-size: 30px;
   margin-right: 15%;
-  border: 3px solid white;
   text-align: center;
-  transition: background-color 0.2s;
+  border: 3px solid black;
+  transition: background-color 0.2s, color 0.2s;
   cursor: pointer;
 }
 
 .monobutton:hover{
-  background-color: rgb(176, 176, 176);
+  background-color: #595859;
+  color: white;
 }
 
 .invis-small{
@@ -579,6 +599,7 @@ a {
   text-align: right;  
   margin-right: 2.25%;
   background-color: var(--main);
+  transition: background-color 0.2s;
   border-radius: 25px;
 }
 
@@ -588,6 +609,7 @@ a {
   text-align: right;  
   margin-right: 2.25%;
   background-color: var(--main);
+  transition: background-color 0.2s;
   border-radius: 25px;
   background: rgb(203, 203, 203);
 }
@@ -598,6 +620,7 @@ a {
   text-align: left;
   margin-left: 2.25%;
   background-color: var(--main);
+  transition: background-color 0.2s;
   border-radius: 25px;
 }
 
@@ -607,6 +630,7 @@ a {
   text-align: left;
   margin-left: 2.25%;
   background-color: var(--main);
+  transition: background-color 0.2s;
   border-radius: 25px;
   background: rgb(203, 203, 203);
 }
@@ -620,6 +644,7 @@ a {
   font-family: roboto-regular; 
   text-align: center;
   color: var(--accent);
+  transition: color 0.2s;
 }
 
 .invis{
@@ -631,6 +656,7 @@ a {
   font-family: roboto-regular; 
   text-align: center;
   color: var(--main);
+  transition: color 0.2s;
   padding-bottom: 15px;
 }
 
@@ -669,6 +695,7 @@ a {
 .scroll-down:hover {
   background-color: var(--accent);
   color: white;
+  transition: background-color 0.2s;
 }
 
 #backtotop {
@@ -712,7 +739,7 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--contrast);
+  background-color: var(--main);
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -724,17 +751,17 @@ a {
   width: 16px;
   left: 4px;
   bottom: 4px;
-  background-color: var(--slight);
+  background-color: var(--bg);
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 input:checked + .slider {
-  background-color: var(--accent);
+  background-color: var(--main);
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px var(--accent);
+  box-shadow: 0 0 1px var(--main);
 }
 
 input:checked + .slider:before {

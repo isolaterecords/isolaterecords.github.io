@@ -139,36 +139,53 @@ function hidemail(){
 }
 
 function toggletheme(){
-  if (theme == 'light'){
-    theme = 'dark';
-    localStorage.setItem('theme','dark');
+  let endtime = new Date();
+  var timediff = endtime - lasttoggle; 
+  lasttoggle = endtime;
+
+  if (timediff > 333){// ms
+    if (theme == 'light'){
+      localStorage.setItem('theme','dark');
+      theme = 'dark';
+    } else {
+      localStorage.setItem('theme','light');
+      theme = 'light';
+    }
+  }
+
+  return timediff;
+}
+
+function settheme(timediff){
+  if (timediff > 333){// ms
+
     var r = document.querySelector(':root');
     var rs = getComputedStyle(r);
-    let holder = rs.getPropertyValue('--darkbg')
-    r.style.setProperty('--bg', holder);
-    holder = rs.getPropertyValue('--darkmain')
-    r.style.setProperty('--main', holder);
-    holder = rs.getPropertyValue('--darkaccent')
-    r.style.setProperty('--accent', holder);
-    holder = rs.getPropertyValue('--darkcontrast')
-    r.style.setProperty('--contrast', holder);
-    holder = rs.getPropertyValue('--darkslight')
-    r.style.setProperty('--slight', holder);
-    
-  } else {
-    theme = 'light';
-    localStorage.setItem('theme','light');
-    var r = document.querySelector(':root');
-    var rs = getComputedStyle(r);
-    let holder = rs.getPropertyValue('--lightbg')
-    r.style.setProperty('--bg', holder);
-    holder = rs.getPropertyValue('--lightmain')
-    r.style.setProperty('--main', holder);
-    holder = rs.getPropertyValue('--lightaccent')
-    r.style.setProperty('--accent', holder);
-    holder = rs.getPropertyValue('--lightcontrast')
-    r.style.setProperty('--contrast', holder);
-    holder = rs.getPropertyValue('--lightslight')
-    r.style.setProperty('--slight', holder);
+    console.log('set theme to '+theme);
+
+    if (theme == 'dark'){
+      let holder = rs.getPropertyValue('--darkbg')
+      r.style.setProperty('--bg', holder);
+      holder = rs.getPropertyValue('--darkmain')
+      r.style.setProperty('--main', holder);
+      holder = rs.getPropertyValue('--darkaccent')
+      r.style.setProperty('--accent', holder);
+      holder = rs.getPropertyValue('--darkcontrast')
+      r.style.setProperty('--contrast', holder);
+      holder = rs.getPropertyValue('--darkslight')
+      r.style.setProperty('--slight', holder);
+    } else {
+      let holder = rs.getPropertyValue('--lightbg')
+      r.style.setProperty('--bg', holder);
+      holder = rs.getPropertyValue('--lightmain')
+      r.style.setProperty('--main', holder);
+      holder = rs.getPropertyValue('--lightaccent')
+      r.style.setProperty('--accent', holder);
+      holder = rs.getPropertyValue('--lightcontrast')
+      r.style.setProperty('--contrast', holder);
+      holder = rs.getPropertyValue('--lightslight')
+      r.style.setProperty('--slight', holder);
+    }
+
   }
 }
