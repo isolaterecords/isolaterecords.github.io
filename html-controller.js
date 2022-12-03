@@ -1,5 +1,3 @@
-const { locals } = require("../../../../first_micro");
-
 async function changepage(page,header){
   // basically we fade out the current content and then change it up\
 
@@ -68,33 +66,39 @@ function hideallpages(){
 }
 
 function selectheader(h){
+  var r = document.querySelector(':root');
+  var rs = getComputedStyle(r);
   let g = document.getElementById(h);
-  g.style.borderBottom = '4px solid rgb(0,0,0)';
+  g.style.borderBottom = '4px solid '+rs.getPropertyValue('--accent');;
 
   addreactor(h,true);
 }
 
 function addreactor(el,selected){
   let g = document.getElementById(el);
+  var r = document.querySelector(':root');
+  var rs = getComputedStyle(r);
   g.addEventListener('mouseover', function(event) {
     let y = document.getElementById(el);
-    y.style.borderBottom = '4px solid rgb(255, 42, 0)';
+    y.style.borderBottom = '4px solid '+rs.getPropertyValue('--accent');
   });
   g.addEventListener('mouseleave', function(event) {
     let y = document.getElementById(el);
     if (!selected){
-      y.style.borderBottom = '2px solid rgb(255, 128, 0)';
+      y.style.borderBottom = '2px solid '+rs.getPropertyValue('--main');
     } else {
-      y.style.borderBottom = '4px solid black';
+      y.style.borderBottom = '4px solid '+rs.getPropertyValue('--contrast');
     }
   });
 }
 
 function disableheaders(){
-  document.getElementById('header0').style.borderBottom = '2px solid rgb(255, 128, 0)';
-  document.getElementById('header1').style.borderBottom = '2px solid rgb(255, 128, 0)';
-  document.getElementById('header2').style.borderBottom = '2px solid rgb(255, 128, 0)';
-  document.getElementById('header3').style.borderBottom = '2px solid rgb(255, 128, 0)';
+  var r = document.querySelector(':root');
+  var rs = getComputedStyle(r);
+  document.getElementById('header0').style.borderBottom = '2px solid '+rs.getPropertyValue('--main');
+  document.getElementById('header1').style.borderBottom = '2px solid '+rs.getPropertyValue('--main');
+  document.getElementById('header2').style.borderBottom = '2px solid '+rs.getPropertyValue('--main');
+  document.getElementById('header3').style.borderBottom = '2px solid '+rs.getPropertyValue('--main');
 
   addreactor('header0',false);
   addreactor('header1',false);
