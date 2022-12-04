@@ -31,6 +31,7 @@ body {
   --contrast: rgb(230,230,230);
   --slight: rgb(255,255,255);
   --underline: #118a88;
+  --opposite: #8127db;
 }
 
 @font-face {
@@ -278,7 +279,7 @@ nav {
   font-family: roboto-regular; 
   font-size: 40px;
   display: inline-block;
-  color: var(--accent);
+  color: var(--contrast);
   padding-left: 7px;
   padding-right: 7px;
   padding-bottom: 30px;
@@ -292,7 +293,7 @@ nav {
   font-family: roboto-regular; 
   font-size: 40px;
   display: inline-block;
-  color: var(--accent);
+  color: var(--contrast);
   padding-left: 5px;
   padding-right: 5px;
   margin-bottom: 10px;
@@ -357,7 +358,7 @@ nav {
 .nav-items li a {
   font-family: roboto-regular; 
   display: block;
-  color: var(--main);
+  color: var(--opposite);
   border-bottom: 2px solid var(--accent);
   transition: border-color 0.5s, border-bottom-width 0.5s, color 0.5s;
 }
@@ -365,15 +366,15 @@ nav {
 .nav-icons li a {
   font-family: roboto-regular; 
   display: block;
-  color: var(--bg);
+  color: var(--opposite);
   /* border-bottom: 2px solid rgb(255, 128, 0); */
   transition: border-color 0.5s, border-bottom-width 0.5s, color 0.5s;
 }
 
 .nav-items li a:hover{
   display: block;
-  color: var(--darkaccent);
-  border-color: var(--accent);
+  color: var(--accent);
+  border-color: var(--opposite);
   border-bottom-width: thick;
 }
 
