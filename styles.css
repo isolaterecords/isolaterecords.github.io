@@ -452,7 +452,7 @@ a {
   padding-top: 75px; 
   padding-bottom: 25px; 
   line-height: 0px; 
-  color: #323233;
+  color: var(--contrast);
 }
 
 .main-title-big{
@@ -463,6 +463,7 @@ a {
   line-height: 50px; 
   color: black; 
   font-family: planet-kosmos;
+  color: var(--contrast);
 }
 
 
