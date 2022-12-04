@@ -182,6 +182,7 @@ function settheme(timediff){
       r.style.setProperty('--underline', holder);
       holder = rs.getPropertyValue('--lightmain')
       r.style.setProperty('--opposite', holder);
+      r.style.setProperty('--oppositesolid', 'white');
     } else {
       let holder = rs.getPropertyValue('--lightbg')
       r.style.setProperty('--bg', holder);
@@ -197,6 +198,8 @@ function settheme(timediff){
       r.style.setProperty('--underline', holder);
       holder = rs.getPropertyValue('--darkaccent')
       r.style.setProperty('--opposite', holder);
+      r.style.setProperty('--oppositesolid', 'black');
+
     }
 
   }

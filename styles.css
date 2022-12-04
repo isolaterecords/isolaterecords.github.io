@@ -32,6 +32,7 @@ body {
   --slight: rgb(255,255,255);
   --underline: #118a88;
   --opposite: #8127db;
+  --oppositesolid: black;
 }
 
 @font-face {
@@ -463,7 +464,7 @@ a {
   line-height: 50px; 
   color: black; 
   font-family: planet-kosmos;
-  color: var(--contrast);
+  color: var(--oppositesolid);
 }
 
 
