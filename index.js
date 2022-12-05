@@ -62,6 +62,7 @@ ovt.style.top = vbox.offsetTop+tbox.marginTop+150+'px';
   let e = 0;
 
   setoverlay(g("i0"),g('mailhover'));
+  g('mailhover').style.left = '-200px';
 
   let bgfader = 0;
 
@@ -105,8 +106,8 @@ ovt.style.top = vbox.offsetTop+tbox.marginTop+150+'px';
       let y = g('mailhover');
     
       console.log('hiding');
-      if (y.offsetLeft > -50){
-        y.style.left = y.offsetLeft-(y.offsetLeft+100)/50 + 'px';
+      if (y.offsetLeft > -160){
+        y.style.left = y.offsetLeft-(y.offsetLeft+200)/50 + 'px';
       } else {
         hidemail1 = false;
       }
