@@ -64,7 +64,7 @@ const getDeviceType = () => {
 ovt.style.top = vbox.offsetTop+tbox.marginTop+150+'px';
 
 if (getDeviceType() == "mobile"){
-  vbox.style.marginTop = vbox.offsetTop+tbox.marginTop+150+'px';
+  vbox.style.marginTop = vbox.offsetTop+tbox.marginTop+450+'px';
 } else {
   vbox.style.marginTop = window.innerHeight-tbox.offsetHeight+'px';
 }
