@@ -45,12 +45,35 @@ let starter2 = document.getElementById('starter2');
 
 console.log(vbox.offsetTop);
 
-vbox.style.marginTop = window.innerHeight-tbox.offsetHeight+'px';
+// ok this is hehe
+const getDeviceType = () => {
+  const ua = navigator.userAgent;
+  if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+    return "tablet";
+  }
+  if (
+    /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
+      ua
+    )
+  ) {
+    return "mobile";
+  }
+  return "desktop";
+};
+
+ovt.style.top = vbox.offsetTop+tbox.marginTop+150+'px';
+
+if (getDeviceType() == "mobile"){
+  vbox.style.marginTop = vbox.offsetTop+tbox.marginTop+150+'px';
+} else {
+  vbox.style.marginTop = window.innerHeight-tbox.offsetHeight+'px';
+}
+
 ouryt.style.marginTop = window.innerHeight-tbox.offsetHeight+100+'px';
 starter1.style.marginTop = window.innerHeight-tbox.offsetHeight+100+'px';
 starter2.style.marginTop = window.innerHeight-tbox.offsetHeight+100+'px';
 
-ovt.style.top = vbox.offsetTop+tbox.marginTop+150+'px';
+
 
 (async () => {
   let counter2 = 0;
