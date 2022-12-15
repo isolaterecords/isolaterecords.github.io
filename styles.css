@@ -692,7 +692,7 @@ a {
   background-color: var(--main);
   border-radius: 50%;
   width: 64px;
-  aspect-ratio: 1 / 1;
+  height: 64px;
   font-size: 2.5rem;
   border: 3px solid black;
   cursor: pointer;
@@ -711,7 +711,7 @@ a {
   right: 2.5%;
   bottom: 0;
   width: 64px;
-  aspect-ratio: 1 / 1;
+  height: 64px;
   z-index: 2;
   border-radius: 50%;
   border: 3px black solid;
