@@ -18,7 +18,7 @@ body {
   --darkmain: #b178eb;
   --lightaccent: #2f2feb;
   --darkaccent: #8127db;
-  --lightcontrast: rgb(45,45,45);
+  --lightcontrast: rgb(35, 35, 35);
   --darkcontrast: rgb(230,230,230);
   --lightslight: rgb(255,255,255);
   --darkslight: rgb(0,0,0);
@@ -226,6 +226,24 @@ body {
 }
 
 .hbutton:hover{
+  background-color: var(--accent);
+}
+
+.hbuttonartists{
+  background-color: var(--main);
+  color: white;
+  border-radius: 25px;
+  margin-left: 10%;
+  width: 70%;
+  font-size: 20px;
+  border: 3px solid white;
+  text-align: center;
+  margin-bottom: 25px;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.hbuttonartists:hover{
   background-color: var(--accent);
 }
 
@@ -522,6 +540,7 @@ a {
   font-family: roboto-regular; 
   text-align: center;
   transition: color 0.2s;
+  font-size: 23px;
 }
 
 .whitetext {
@@ -657,7 +676,7 @@ a {
 
 .invis{
   opacity: 0;
-  z-index: -1;
+  z-index: -100;
 }
 
 .persondetails {
@@ -668,9 +687,25 @@ a {
   padding-bottom: 15px;
 }
 
+.persondetailslite {
+  font-family: roboto-regular; 
+  text-align: center;
+  color: var(--main);
+  transition: color 0.2s, border-bottom 0.2s;
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--underline);
+  width: 50%;
+  margin-left: 25%;
+}
+
+.persondetailslite:hover {
+  color: var(--contrast);
+  border-bottom: 2px solid var(--accent);
+}
+
 .mailhover {
   height: 50px;
-  width: 200px;
+  width: 300px;
   background: rgba(0,0,0,0);
   color: rgb(40, 227, 11);
   position: fixed;

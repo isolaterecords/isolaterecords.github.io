@@ -23,6 +23,8 @@ let lasttoggle = new Date();
 
 settheme(1000);
 
+disableheaders();
+
 var ur = window.location.href;
 if (ur.includes('#aboutus')){
   hideallpages();
@@ -131,17 +133,17 @@ starter2.style.marginTop = window.innerHeight-tbox.offsetHeight+100+'px';
       let y = g('mailhover');
     
       console.log('hiding');
-      if (y.offsetLeft > -160){
-        y.style.left = y.offsetLeft-(y.offsetLeft+200)/50 + 'px';
+      if (y.offsetLeft > -180){
+        y.style.left = y.offsetLeft-(y.offsetLeft+220)/50 + 'px';
       } else {
         hidemail1 = false;
       }
     }
 
-    showel('header0fade','rgb('+(window.scrollY-55)*10+','+(window.scrollY-55)*10+','+(window.scrollY-55)*10+')');
-    showel('header1fade','rgb('+(window.scrollY-55)*10+','+(window.scrollY-55)*10+','+(window.scrollY-55)*10+')');
-    showel('header2fade','rgb('+(window.scrollY-55)*10+','+(window.scrollY-55)*10+','+(window.scrollY-55)*10+')');
-    showel('header3fade','rgb('+(window.scrollY-55)*10+','+(window.scrollY-55)*10+','+(window.scrollY-55)*10+')');
+    showel('header0fade','rgb(255,255,255)');
+    showel('header1fade','rgb(255,255,255)');
+    showel('header2fade','rgb(255,255,255)');
+    showel('header3fade','rgb(255,255,255)');
     
     if (e % 10 == 0){
       let h = Math.max( document.body.scrollHeight, document.body.offsetHeight);

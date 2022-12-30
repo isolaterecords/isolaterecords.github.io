@@ -15,7 +15,7 @@
   <body>
     <script src="html-controller.js"></script>
 
-    <nav id="nav1" class="nav-real">
+    <nav id="nav1" class="nav-real" style="display: none;">
       <ul class="nav-items" id="nav">
         <li><a id='header0' class="header" onclick="changepage('mainpage','header0');">Home</a></li>
         <li><a id='header1' class="header" onclick="changepage('aboutus','header1');">About Us</a></li>
@@ -32,7 +32,7 @@
           <img id='i0' src="images/mail.png" height="30px;" onmouseover="changesrc('i0','images/mailhover.png');" onmouseleave="changesrc('i0','images/mail.png');" >
         </a></li>
         <li><h2 class="header"></h2></li>
-        <li id="h00"><h2 id='header0fade' class="headertop" onclick="changepage('mainpage','header0fade');" style="margin-left: 110px;">Home</h2></li>
+        <li id="h00"><h2 id='header0fade' class="headertop" onclick="changepage('mainpage','header0fade');" style="margin-left: 200px;">Home</h2></li>
         <li id="h01"><h2 id='header1fade' class="headertop" onclick="changepage('aboutus','header1fade');">About Us</h2></li>
         <li id="h02"><h2 id='header2fade' class="headertop" onclick="changepage('artists','header2fade');">Artists</h2></li>
         <li id="h03"><h2 id='header3fade' class="headertop" onclick="changepage('ourteam','header3fade');">Our Team</h2></li>
@@ -49,7 +49,7 @@
         <li><a href=""><img src="images/instagram.png" height="20px;" style="display: none;" ></a></li>
         <li><a href=""><img src="images/instagram.png" height="20px;" style="display: none;" ></a></li>
         <li><a href=""><img src="images/instagram.png" height="20px;" style="display: none;" ></a></li>
-        <li><a id="e2" href="https://www.instagram.com/IsolateRecords/"><img id='i1' src="images/instagram.png" height="20px;" onmouseover="changesrc('i1','images/instagramhover.png');" onmouseleave="changesrc('i1','images/instagram.png');" ></a></li>
+        <li><a id="e2" href="https://www.instagram.com/isolaterecordsofficial/"><img id='i1' src="images/instagram.png" height="20px;" onmouseover="changesrc('i1','images/instagramhover.png');" onmouseleave="changesrc('i1','images/instagram.png');" ></a></li>
         </ul> 
     </nav>
 
@@ -109,7 +109,7 @@
         <div class="box">
           <div class="tinyblock-starter">
             <h2 class="blurb">AGP</h2>
-            <img src="images/advaita.jpg" width="100px">
+            <img src="images/fl.png" width="100px">
             <a href='https://skparab1.github.io/agpbeats'><button class="hbutton">View Portfolio</button></a>
           </div>
           <div class="tinyblock">
@@ -246,36 +246,38 @@
       </div>
     </div>
 
-    <div class='mainstuffblank' id="artists" style="height: 1500px">
+    <div class='mainstuffblank' id="artists">
       <div class="box-white" style="margin-top: 13.5%;">
         <h1 id='head' class='main-title' style="margin-top: -100px;">Artists</h1>
         <h2 class="blurb">At Isolate Records, we are here to support capable, ambitious, and passionate artists.</h2>
       </div>
       <br>
       <h2 class="blurb" id='starter2'>Editors</h2>
-      <div class="fullwidth">
+      <div class="fullwidth" style="padding-bottom: 50px;">
         <div class="leftblock">
           <div class="personblock">
             <img src="images/manav.png" width="100%" height="100%">
             <h3 class="personname">Manav Choudhary</h3>
+            <a href=''><h4 class="persondetailslite">View Portfolio</h4></a>
           </div>
         </div>
         <div class="rightblock">
           <div class="personblock">
             <img src="images/arsunol.gif" width="100%" height="100%">
             <h3 class="personname">Arsunol</h3>
+            <a href='https://arsunol.carrd.co'><h4 class="persondetailslite">View Portfolio</h4></a>
           </div>
         </div>
       </div>
 
-      <h1 class="invis">positions</h1>
-      <h2 class="blurb">Producers</h2>
+      <h2 class="blurb" style="margin-top: 500px;">Producers</h2>
 
       <div class="fullwidth">
         <div class="midblock">
           <div class="personblock">
-            <img src="images/advaita.jpg" width="100%" height="100%">
+            <img src="images/fl.png" width="100%" height="100%">
             <h3 class="personname">AGP</h3>
+            <a href=''><h4 class="persondetailslite">View Portfolio</h4></a>
           </div>
         </div>
       </div>
@@ -288,6 +290,7 @@
           <div class="personblock">
             <img src="images/raka.png" width="100%" height="100%">
             <h3 class="personname">Bob Raka</h3>
+            <a href=''><h4 class="persondetailslite">View Portfolio</h4></a>
           </div>
         </div>
       </div>

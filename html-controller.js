@@ -87,7 +87,7 @@ function addreactor(el,selected){
     if (!selected){
       y.style.borderBottom = '2px solid '+rs.getPropertyValue('--main');
     } else {
-      y.style.borderBottom = '4px solid '+rs.getPropertyValue('--contrast');
+      y.style.borderBottom = '4px solid '+rs.getPropertyValue('--opposite');
     }
   });
 }
@@ -95,15 +95,15 @@ function addreactor(el,selected){
 function disableheaders(){
   var r = document.querySelector(':root');
   var rs = getComputedStyle(r);
-  document.getElementById('header0').style.borderBottom = '2px solid '+rs.getPropertyValue('--main');
-  document.getElementById('header1').style.borderBottom = '2px solid '+rs.getPropertyValue('--main');
-  document.getElementById('header2').style.borderBottom = '2px solid '+rs.getPropertyValue('--main');
-  document.getElementById('header3').style.borderBottom = '2px solid '+rs.getPropertyValue('--main');
+  document.getElementById('header0fade').style.borderBottom = '2px solid '+rs.getPropertyValue('--main');
+  document.getElementById('header1fade').style.borderBottom = '2px solid '+rs.getPropertyValue('--main');
+  document.getElementById('header2fade').style.borderBottom = '2px solid '+rs.getPropertyValue('--main');
+  document.getElementById('header3fade').style.borderBottom = '2px solid '+rs.getPropertyValue('--main');
 
-  addreactor('header0',false);
-  addreactor('header1',false);
-  addreactor('header2',false);
-  addreactor('header3',false);
+  addreactor('header0fade',false);
+  addreactor('header1fade',false);
+  addreactor('header2fade',false);
+  addreactor('header3fade',false);
 }
 
 function showel(el,clr){
