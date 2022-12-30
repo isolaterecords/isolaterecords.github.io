@@ -8,6 +8,8 @@ async function changepage(page,header){
   let pc = document.getElementById(currentpage);
   const sleep = ms => new Promise(res => setTimeout(res, ms));
 
+  console.log('started changing process');
+
   disableheaders();
   selectheader(header);
 
@@ -37,6 +39,7 @@ async function changepage(page,header){
     document.getElementById('ovl-t').style.display = 'block';
     document.getElementById('ovl-t').style.zIndex = -1;
   } else if (page == 'ourteam'){
+    console.log('shud be changing to ourteam');
     document.body.style.backgroundImage = "url('images/lightblue.png')";
     document.getElementById('ovl-t').style.display = 'block';
     document.getElementById('ovl-t').style.zIndex = -1;
