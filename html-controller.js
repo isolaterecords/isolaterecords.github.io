@@ -8,6 +8,12 @@ async function changepage(page,header){
   let pc = document.getElementById(currentpage);
   const sleep = ms => new Promise(res => setTimeout(res, ms));
 
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  });
+  
   console.log('started changing process');
 
   disableheaders();
