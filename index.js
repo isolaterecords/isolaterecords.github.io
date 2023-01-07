@@ -53,6 +53,13 @@ let starter2 = document.getElementById('starter2');
 
 console.log(vbox.offsetTop);
 
+let end = document.getElementById('h03').offsetLeft + document.getElementById('h03').offsetWidth;
+
+let diff1 = end - document.getElementById('h00').offsetLeft;
+
+console.log('E'+(window.innerWidth/2+diff1));
+document.getElementById('h00').style.marginLeft = (window.innerWidth/2-diff1/1.3) +'px';
+
 // ok this is hehe
 const getDeviceType = () => {
   const ua = navigator.userAgent;
