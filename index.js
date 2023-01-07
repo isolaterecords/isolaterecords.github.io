@@ -19,6 +19,12 @@ if (theme == null){
   localStorage.setItem('theme','light');
 }
 
+window.scrollTo({
+  top: 0,
+  left: 0,
+  behavior: 'smooth'
+});
+
 let lasttoggle = new Date();
 
 settheme(1000);
