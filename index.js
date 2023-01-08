@@ -50,6 +50,7 @@ let pc = document.getElementById('pc');
 let ouryt = document.getElementById('ouryt');
 let starter1 = document.getElementById('starter1');
 let starter2 = document.getElementById('starter2');
+let e2 = document.getElementById('e2');
 
 console.log(vbox.offsetTop);
 
@@ -90,6 +91,7 @@ ouryt.style.marginTop = window.innerHeight-tbox.offsetHeight+100+'px';
 starter1.style.marginTop = window.innerHeight-tbox.offsetHeight+100+'px';
 starter2.style.marginTop = window.innerHeight-tbox.offsetHeight+100+'px';
 
+e2.style.marginLeft = window.innerWidth/20+'px';
 
 
 (async () => {
