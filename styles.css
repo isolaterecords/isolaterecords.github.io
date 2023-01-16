@@ -619,6 +619,11 @@ a {
   width: 100%;
 }
 
+.fullwidth-extended{
+  width: 100%;
+  margin-bottom: 200px;
+}
+
 .leftblock{
   width: 25%;
   float: left;
@@ -725,7 +730,7 @@ a {
 
 .mailhover {
   height: 50px;
-  width: 600px;
+  width: auto;
   font-size: 15px;
   background: rgba(0,0,0,0);
   color: rgb(40, 227, 11);
