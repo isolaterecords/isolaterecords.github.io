@@ -725,7 +725,8 @@ a {
 
 .mailhover {
   height: 50px;
-  width: 500px;
+  width: 600px;
+  font-size: 15px;
   background: rgba(0,0,0,0);
   color: rgb(40, 227, 11);
   position: fixed;
