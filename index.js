@@ -84,13 +84,15 @@ if (getDeviceType() == "mobile"){
   console.log('MOBILE');
   ovt.style.top = vbox.offsetTop+50+'px';
   vbox.style.marginTop = vbox.offsetTop+tbox.marginTop+450+'px';
+  ouryt.style.marginTop = vbox.offsetTop+tbox.marginTop+550+'px';
+  starter1.style.marginTop = vbox.offsetTop+tbox.marginTop+550+'px';
+  starter2.style.marginTop = vbox.offsetTop+tbox.marginTop+550+'px';
 } else {
   vbox.style.marginTop = window.innerHeight-tbox.offsetHeight+'px';
+  ouryt.style.marginTop = window.innerHeight-tbox.offsetHeight+100+'px';
+  starter1.style.marginTop = window.innerHeight-tbox.offsetHeight+100+'px';
+  starter2.style.marginTop = window.innerHeight-tbox.offsetHeight+100+'px';
 }
-
-ouryt.style.marginTop = window.innerHeight-tbox.offsetHeight+100+'px';
-starter1.style.marginTop = window.innerHeight-tbox.offsetHeight+100+'px';
-starter2.style.marginTop = window.innerHeight-tbox.offsetHeight+100+'px';
 
 e2.style.marginLeft = '10px';
 e0.style.marginLeft = window.innerWidth/25+"px";
