@@ -723,6 +723,15 @@ a {
   margin-left: 25%;
 }
 
+.persondetailscatagory {
+  font-family: roboto-regular; 
+  text-align: center;
+  color: var(--main);
+  padding-bottom: 5px;
+  width: 50%;
+  margin-left: 25%;
+}
+
 .persondetailslite:hover {
   color: var(--contrast);
   border-bottom: 2px solid var(--accent);
