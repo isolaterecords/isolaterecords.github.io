@@ -569,7 +569,7 @@ a {
   transition: color 0.2s;
   font-size: 30px;
   font-weight: bold; 
-  text-decoration: 3px underline var(--accent);
+  text-decoration: 3px underline var(--main);
   margin-bottom: 10px;
   width: auto;
 }
