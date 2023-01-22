@@ -38,6 +38,8 @@ async function changepage(page,header){
     document.getElementById('ovl-t').style.display = 'block';
   } else if (page == 'aboutus'){
     document.body.style.backgroundImage = "url('images/orange.png')";
+    document.body.style.backgroundRepeat = 'no-repeat';
+    document.getElementById('b3').style.marginTop = window.innerHeight/2-225+'px';
     document.getElementById('ovl-t').style.display = 'block';
     document.getElementById('ovl-t').style.zIndex = -1;
   } else if (page == 'artists'){
