@@ -44,6 +44,8 @@ async function changepage(page,header){
 
     if (getDeviceType() == "mobile"){
       document.getElementById('backtotop').style.display = 'none';
+      document.getElementById('aboutus').style.width = window.innerWidth+'px';      document.getElementById('aboutus').style.width = window.innerWidth+'px';
+      document.getElementById('ouryt').style.width = window.innerWidth+'px';
     }
   } else if (page == 'artists'){
     document.body.style.backgroundImage = "url('images/purple.png')";
