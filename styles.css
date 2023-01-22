@@ -562,6 +562,18 @@ a {
   font-size: 30px;
 }
 
+.blurb-description {
+  color: var(--contrast);
+  font-family: roboto-regular; 
+  text-align: center;
+  transition: color 0.2s;
+  font-size: 30px;
+  font-weight: bold; 
+  text-decoration: 3px underline var(--accent);
+  margin-bottom: 10px;
+  width: auto;
+}
+
 .whitetext {
   font-family: roboto-regular; 
   text-align: center;
