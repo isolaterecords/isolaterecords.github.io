@@ -32,6 +32,7 @@ async function changepage(page,header){
   pc = document.getElementById(page);
   currentpage = page;
   pc.style.display = 'block';
+  document.getElementById('backtotop').style.display = 'block';
 
   if (page == 'mainpage'){
     document.body.style.backgroundImage = "url('images/large-banner.png')";
@@ -40,6 +41,10 @@ async function changepage(page,header){
     document.body.style.backgroundImage = "url('images/orange.png')";
     document.getElementById('ovl-t').style.display = 'block';
     document.getElementById('ovl-t').style.zIndex = -1;
+
+    if (getDeviceType() == "mobile"){
+      document.getElementById('backtotop').style.display = 'none';
+    }
   } else if (page == 'artists'){
     document.body.style.backgroundImage = "url('images/purple.png')";
     document.getElementById('ovl-t').style.display = 'block';
