@@ -44,7 +44,6 @@ async function changepage(page,header){
 
     if (getDeviceType() == "mobile"){
       document.getElementById('backtotop').style.display = 'none';
-      document.getElementById('aboutus').style.width = window.innerWidth*1.1+'px';  
       document.getElementById('aboutus').style.background = "var(--bg)";    
       document.getElementById('ouryt').style.width = window.innerWidth+'px';
     }
