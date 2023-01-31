@@ -46,6 +46,7 @@ async function changepage(page,header){
       document.getElementById('backtotop').style.display = 'none';
       document.getElementById('aboutus').style.background = "var(--bg)";    
       document.getElementById('ouryt').style.width = window.innerWidth*0.8+'px';
+      document.getElementById('ouryt').style.marginLeft = window.innerWidth*0.2+'px';
       document.getElementById('b3').style.marginLeft = (window.innerWidth-document.getElementById('b3').offsetWidth)/2+'px';
     }
   } else if (page == 'artists'){
