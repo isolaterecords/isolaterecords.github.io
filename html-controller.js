@@ -34,6 +34,8 @@ async function changepage(page,header){
   pc.style.display = 'block';
   document.getElementById('backtotop').style.display = 'block';
 
+  document.body.style.width = window.innerWidth+'px';
+
   if (page == 'mainpage'){
     document.body.style.backgroundImage = "url('images/large-banner.png')";
     document.getElementById('ovl-t').style.display = 'block';
@@ -48,6 +50,7 @@ async function changepage(page,header){
       document.getElementById('ouryt').style.width = window.innerWidth*0.8+'px';
       document.getElementById('ouryt').style.marginLeft = window.innerWidth*0.1+'px';
       document.getElementById('b3').style.marginLeft = (window.innerWidth-document.getElementById('b3').offsetWidth)/2+'px';
+      document.body.style.width = window.innerWidth*1.1+'px';
     }
   } else if (page == 'artists'){
     document.body.style.backgroundImage = "url('images/purple.png')";
