@@ -46,7 +46,8 @@ async function changepage(page,header){
 
     if (mobileoverride){
       document.getElementById('backtotop').style.display = 'none';
-      document.getElementById('aboutus').style.background = "var(--bg)";    
+      document.getElementById('aboutus').style.background = "var(--bg)";
+      document.getElementById('aboutus').style.marginLeft = window.innerWidth*0.05+'px';    
       document.getElementById('ouryt').style.width = window.innerWidth*0.8+'px';
       document.getElementById('ouryt').style.marginLeft = window.innerWidth*0.15+'px';
       document.getElementById('b3').style.marginLeft = (window.innerWidth-document.getElementById('b3').offsetWidth)/2+'px';
