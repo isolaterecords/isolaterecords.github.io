@@ -49,7 +49,6 @@ async function changepage(page,header){
       document.getElementById('aboutus').style.background = "var(--bg)";
       document.getElementById('aboutus').style.marginLeft = window.innerWidth*0.15+'px';    
       document.getElementById('ouryt').style.width = window.innerWidth*0.8+'px';
-      document.getElementById('ouryt').style.background = 'rgba(0,0,0,0)';
       document.getElementById('ouryt').style.marginLeft = window.innerWidth*0.15+'px';
       document.getElementById('b3').style.marginLeft = (window.innerWidth-document.getElementById('b3').offsetWidth)/2+'px';
       document.body.style.width = window.innerWidth*1.1+'px';
