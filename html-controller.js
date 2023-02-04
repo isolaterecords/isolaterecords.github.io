@@ -35,6 +35,7 @@ async function changepage(page,header){
   document.getElementById('backtotop').style.display = 'block';
 
   document.body.style.width = window.innerWidth+'px';
+  document.getElementById('aboutus').style.width = window.innerWidth*1+'px';    
 
   if (page == 'mainpage'){
     document.body.style.backgroundImage = "url('images/large-banner.png')";
