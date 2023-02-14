@@ -45,17 +45,17 @@ async function changepage(page,header){
     document.getElementById('ovl-t').style.display = 'block';
     document.getElementById('ovl-t').style.zIndex = -1;
 
-    // if (mobileoverride){
-    //   document.getElementById('backtotop').style.display = 'none';
-    //   document.getElementById('aboutus').style.background = "var(--bg)";
-    //   document.getElementById('aboutus').style.marginLeft = window.innerWidth*0+'px';    
-    //   document.getElementById('aboutus').style.width = window.innerWidth*1.15+'px';    
-    //   document.getElementById('ouryt').style.background = 'rgba(0,0,0,0)';
-    //   document.getElementById('ouryt').style.width = window.innerWidth*0.8+'px';
-    //   document.getElementById('ouryt').style.marginLeft = window.innerWidth*0.15+'px';
-    //   document.getElementById('b3').style.marginLeft = (window.innerWidth-document.getElementById('b3').offsetWidth)/2+'px';
-    //   document.body.style.width = window.innerWidth*1.1+'px';
-    // }
+    if (mobileoverride){
+      document.getElementById('backtotop').style.display = 'none';
+      document.getElementById('aboutus').style.background = "var(--bg)";
+      document.getElementById('aboutus').style.marginLeft = window.innerWidth*0+'px';    
+      document.getElementById('aboutus').style.width = window.innerWidth*1.15+'px';    
+      document.getElementById('ouryt').style.background = 'rgba(0,0,0,0)';
+      document.getElementById('ouryt').style.width = window.innerWidth*0.8+'px';
+      document.getElementById('ouryt').style.marginLeft = window.innerWidth*0.15+'px';
+      document.getElementById('b3').style.marginLeft = (window.innerWidth-document.getElementById('b3').offsetWidth)/2+'px';
+      document.body.style.width = window.innerWidth*1.1+'px';
+    }
   } else if (page == 'artists'){
     document.body.style.backgroundImage = "url('images/purple.png')";
     document.getElementById('ovl-t').style.display = 'block';
