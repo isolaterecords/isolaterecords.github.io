@@ -81,7 +81,7 @@ const getDeviceType = () => {
 ovt.style.top = vbox.offsetTop+tbox.marginTop+150+'px';
 
 let mobileoverride = false;
-let ismobile = getDeviceType() == "mobile" || mobileoverride;
+let ismobile = (getDeviceType() == "mobile" || mobileoverride);
 
 if (mobileoverride){
   console.log('MOBILE');
