@@ -208,7 +208,7 @@ body {
   text-align: center;
   float: left;
   transition: box-shadow 0.2s, background-color 0.2s;
-  margin-left: 24.25%;
+  margin-left: 10.5%;
 }
 
 .tinyblock:hover{
@@ -235,6 +235,25 @@ body {
 
 .hbutton:hover{
   background-color: var(--accent);
+}
+
+.loginbutton{
+  background-color: var(--slight);
+  color: var(--main);
+  border-radius: 25px;
+  width: 20%;
+  font-size: 15px;
+  border: 3px solid var(--main);
+  text-align: center;
+  margin-left: 40%;
+  margin-bottom: 25px;
+  transition: background-color 0.2s;
+  cursor: pointer;
+  font-family: kanit-regular;
+}
+
+.loginbutton:hover{
+  background-color: var(--bg);
 }
 
 .hbuttonartists{
@@ -808,6 +827,19 @@ a {
   color: white;
 }
 
+.inputbox {
+  background-color: var(--slight);
+  color: var(--contrast);
+  border: 0px red;
+  border-bottom: 3px solid var(--main);
+  width: 20%;
+  margin-left: 40%;
+  height: 35px;
+  text-align: center;
+  margin-bottom: 20px;
+  transition: border 0.25s;
+}
+
 .switch {
   position: relative;
   display: inline-block;
@@ -868,3 +900,59 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 } 
+
+.halfwidthleft {
+  width: 49%;
+  float: left;
+}
+
+.halfwidthright {
+  width: 49%;
+  float: right;
+}
+
+.uploadbutton {
+  height: 50px;
+  width: 40%;
+  border: 3px solid var(--main);
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+}
+
+.uploaddialogue {
+  position: absolute;
+  width: 40%;
+  left: 30%;
+  height: 40%;
+  top: 30%;
+  border: 4px solid var(--main);
+  background-color: var(--bg);
+  border-radius: 25px;
+  z-index: 10000;
+  text-align: center;
+  padding: 15px;
+  font-family: roboto-regular;
+  display: none;
+  opacity: 0;
+}
+
+.prompt {
+  font-family: roboto-regular; 
+  text-align: center;
+  color: var(--main);
+  padding-bottom: 5px;
+  font-size: 140%;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.fullblock{
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  display: none;
+}

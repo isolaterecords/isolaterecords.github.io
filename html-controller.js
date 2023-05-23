@@ -1,6 +1,8 @@
 async function changepage(page,header){
   // basically we fade out the current content and then change it up\
 
+  //TH1M3c6V.qsE61RzeUgaNkzMFvUcGtU-zbbTN6cL7o
+  
   // cancel if same
   if (currentpage == page){
     return; //terminate
@@ -17,7 +19,10 @@ async function changepage(page,header){
   console.log('started changing process');
 
   disableheaders();
-  selectheader(header);
+
+  if (header != null){
+    selectheader(header);
+  }
 
   let fader1 = 100;
   while (fader1 > 0){
@@ -65,6 +70,28 @@ async function changepage(page,header){
     document.body.style.backgroundImage = "url('images/lightblue.png')";
     document.getElementById('ovl-t').style.display = 'block';
     document.getElementById('ovl-t').style.zIndex = -1;
+  } else if (page == 'account'){
+    console.log('shud be changing to account');
+    document.body.style.backgroundImage = "url('images/lightblue.png')";
+    document.getElementById('ovl-t').style.display = 'none';
+    document.getElementById('ovl-t').style.zIndex = -1;
+
+    if (localStorage.getItem('isolateaccount') != null && localStorage.getItem('isolateaccount') != "loggedout"){
+      document.getElementById('loggerin').style.display = 'none'; 
+      document.getElementById('creator').style.display = 'none';
+      document.getElementById('accessor').style.display = 'none';
+      document.getElementById('inside').style.display = 'block';
+      document.getElementById('dashdisp').textContent = 'Welcome, '+localStorage.getItem('isolateaccount');
+    } else {
+      document.getElementById('loggerin').style.display = 'none'; 
+      document.getElementById('creator').style.display = 'none';
+      document.getElementById('inside').style.display = 'none';
+      document.getElementById('accessor').style.display = 'block';
+
+      document.getElementById("upload").addEventListener("change", handleFiles, false);    }
+  } else {
+    console.log('got to it');
+    document.getElementById('register').style.display = 'block';
   }
 
   fader1 = 0;
@@ -83,6 +110,160 @@ async function changepage(page,header){
   }
 }
 
+function hashCode(string){
+  var hash = 0;
+  for (var i = 0; i < string.length; i++) {
+      var code = string.charCodeAt(i);
+      hash = ((hash<<5)-hash)+code;
+      hash = hash & hash; // Convert to 32bit integer
+  }
+  return hash;
+}
+
+function attemptlogin(){
+  //attempts the login
+  let user = document.getElementById('theusername').value;
+  let pwd = document.getElementById('thepassword').value;
+
+  document.getElementById('login').textContent = "Logging in...";
+
+  (async () => {
+    console.log('fetching');
+    fetch(`https://newmicro-1-b9063375.deta.app/?ISOLATEAUTH=user=`+hashCode(user)+"&pwd="+hashCode(pwd))
+      .then(response => {
+          return response.json();
+      })
+      .then(data => {
+
+          if (data){
+            document.getElementById('loggerin').style.display = 'none'; 
+            document.getElementById('creator').style.display = 'none';
+            document.getElementById('inside').style.display = 'block';  
+            localStorage.setItem('isolateaccount',user);
+            document.getElementById('dashdisp').textContent = 'Welcome, '+user;
+          
+          } else {
+            document.getElementById('wrongpwd').style.opacity = 1;
+            document.getElementById('theusername').style.borderBottomColor = 'red';
+            document.getElementById('thepassword').style.borderBottomColor = 'red';
+            document.getElementById('login').textContent = "Log in...";  
+          }
+      })
+  })();
+}
+
+function logout(){
+  localStorage.setItem('isolateaccount','loggedout');
+  document.getElementById('loggerin').style.display = 'block'; 
+  document.getElementById('creator').style.display = 'none';
+  document.getElementById('inside').style.display = 'none';
+}
+
+function checkusername(nm){
+  if (nm.replaceAll(" ",'') == ''){
+    document.getElementById('regfb').textContent = 'Username (Taken)';  
+    return;
+  }
+
+  (async () => {
+    console.log('fetching');
+    fetch(`https://newmicro-1-b9063375.deta.app/?ISOLATEEXISTS=`+hashCode(nm))
+      .then(response => {
+          return response.json();
+      })
+      .then(data => {
+
+          if (data){
+            document.getElementById('regfb').textContent = 'Username (Taken)';
+          } else {
+            document.getElementById('regfb').textContent = 'Username (Available)';  
+          }
+      })
+  })();
+}
+
+function tryenter(){
+  let tpwd = document.getElementById('enterpassword').value;
+
+  if (tpwd == 'arsunol'){
+    // allowed
+    document.getElementById('loggerin').style.display = 'block'; 
+    document.getElementById('creator').style.display = 'none';
+    document.getElementById('accessor').style.display = 'none';
+    document.getElementById('inside').style.display = 'none';
+  } else {
+    document.getElementById('wrongpwd2').style.opacity = 1;
+  }
+}
+
+
+function uploadfile(){
+  const reader = new FileReader();
+ 
+
+  let fileObj = document.getElementById('upload').value;
+
+  console.log(document.getElementById('upload'));
+  console.log(fileObj);
+  // const objectURL = window.URL.createObjectURL(fileObj);
+
+  // console.log('first'+objectURL);
+
+  let ur = reader.readAsDataURL(fileObj);
+
+  console.log('next'+ur);
+
+  
+
+
+
+}
+
+function tryregister(){
+  // make sure everything is met
+  if (document.getElementById('regfb').textContent.includes('Taken')){
+    // failed, username unavailable
+    document.getElementById('wrongpwd1').textContent = 'Username taken, chose another one';
+    document.getElementById('wrongpwd1').style.opacity = 1;
+    return;
+  }
+
+  if (document.getElementById('thepassword1').value != document.getElementById('thepassword2').value){
+    // failed, passwords dont match
+    document.getElementById('wrongpwd1').textContent = "Passwords don't match";
+    document.getElementById('wrongpwd1').style.opacity = 1;
+    return;
+  }
+
+  // ready to register
+
+  let user = document.getElementById('theusername22').value;
+  let pwd = document.getElementById('thepassword1').value;
+
+  document.getElementById('registering').textContent = "Creating...";
+
+  (async () => {
+    console.log('fetching');
+    //       http://localhost:3000/?ISOLATEREGISTER=user=hi&pwd=hello
+    fetch(`https://newmicro-1-b9063375.deta.app/?ISOLATEREGISTER=user=`+hashCode(user)+"&pwd="+hashCode(pwd))
+      .then(response => {
+          console.log('done with this');
+          document.getElementById('loggerin').style.display = 'none'; 
+          document.getElementById('creator').style.display = 'none';
+          document.getElementById('inside').style.display = 'block';
+          localStorage.setItem('isolateaccount', user);
+          document.getElementById('dashdisp').textContent = 'Welcome, '+user;
+
+          return response.json();
+      })
+      .then(data => {
+
+        // were done
+      })
+  })();
+
+}
+
 function hideallpages(){
   document.getElementById('mainpage').style.display = 'none';
   document.getElementById('aboutus').style.display = 'none';
@@ -97,6 +278,44 @@ function selectheader(h){
   g.style.borderBottom = '4px solid '+rs.getPropertyValue('--accent');;
 
   addreactor(h,true);
+}
+
+
+async function openelement(el){
+  el = document.getElementById(el);
+  el.style.display = 'block';
+  let fullblock = document.getElementById('fullblock');
+  fullblock.style.display = 'block';
+
+  let i = 0;
+  let ps = 100;
+  while (i < 100){
+      el.style.opacity = i/100;
+      el.style.marginTop = (ps)+'px';
+      fullblock.style.opacity = (i/100)*0.6;
+      i += 1;
+      ps = ps*0.95;
+      await sleep();
+  }
+}
+
+async function closeelement(el){
+  el = document.getElementById(el);
+  let fullblock = document.getElementById('fullblock');
+
+  let i = 0;
+  let ps = 1;
+  while (i < 100){
+      el.style.opacity = (1-i/100);
+      el.style.marginTop = (ps)+'px';
+      fullblock.style.opacity = (0.6-(i/100)*0.6);
+      i += 1;
+      ps = ps*1.05;
+      await sleep();
+  }
+
+  fullblock.style.display = 'none';
+  el.style.display = 'none';
 }
 
 function addreactor(el,selected){
@@ -124,11 +343,13 @@ function disableheaders(){
   document.getElementById('header1fade').style.borderBottom = '2px solid '+rs.getPropertyValue('--main');
   document.getElementById('header2fade').style.borderBottom = '2px solid '+rs.getPropertyValue('--main');
   document.getElementById('header3fade').style.borderBottom = '2px solid '+rs.getPropertyValue('--main');
+  // document.getElementById('header4fade').style.borderBottom = '2px solid '+rs.getPropertyValue('--main');
 
   addreactor('header0fade',false);
   addreactor('header1fade',false);
   addreactor('header2fade',false);
   addreactor('header3fade',false);
+  // addreactor('header4fade',false);
 }
 
 function showel(el,clr){
@@ -152,6 +373,7 @@ function resetborders(){
   document.getElementById("h01").style.borderTop = '0px solid orangered';
   document.getElementById("h02").style.borderTop = '0px solid orangered';
   document.getElementById("h03").style.borderTop = '0px solid orangered';
+  document.getElementById("h04").style.borderTop = '0px solid orangered';
 }
 
 function settopborder(el){

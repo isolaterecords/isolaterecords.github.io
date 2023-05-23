@@ -32,6 +32,7 @@ settheme(1000);
 disableheaders();
 
 var ur = window.location.href;
+// doesnt rlly work
 if (ur.includes('#aboutus')){
   hideallpages();
   changepage('aboutus','header1fade');
@@ -165,6 +166,7 @@ e0.style.marginLeft = window.innerWidth/25+"px";
     showel('header1fade','rgb(255,255,255)');
     showel('header2fade','rgb(255,255,255)');
     showel('header3fade','rgb(255,255,255)');
+    // showel('header4fade','rgb(255,255,255)');
     
     if (e % 10 == 0){
       let h = Math.max( document.body.scrollHeight, document.body.offsetHeight);
